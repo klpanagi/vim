@@ -20,7 +20,7 @@ Plugin 'SirVer/ultisnips'
 "" Snippets
 Plugin 'honza/vim-snippets'
 "" CScope
-Plugin "git@github.com:brookhong/cscope.vim.git"
+Plugin 'git@github.com:brookhong/cscope.vim.git'
 
 
 call vundle#end()
@@ -185,7 +185,7 @@ au Syntax * RainbowParenthesesLoadChevrons
 
 "" Cscope
 nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
-nnoremap <leader>l :call ToggleLocationList()<CR>
+"nnoremap <leader>l :call ToggleLocationList()<CR>
 
 "s: Find this C symbol
 nnoremap  <leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
