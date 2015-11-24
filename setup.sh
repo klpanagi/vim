@@ -16,8 +16,10 @@ git clone ${VundleGit} vim/bundle/Vundle.vim || \
   }
 
 # Symlinks
-ln -s "${currentDir}/vim" ~/.vim  # Vim directory
-ln -s "${currentDir}/vimrc" ~/.vimrc  # Vim RC file
+# Vim directory
+ln -s "${currentDir}/vim" ~/.vim
+# Vim RC file
+ln -s "${currentDir}/vimrc" ~/.vimrc
 
 vim +PluginInstall +qall
 

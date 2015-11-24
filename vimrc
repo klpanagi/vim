@@ -17,7 +17,11 @@ Plugin 'ervandew/supertab'
 "" Nerd Commenter
 Plugin 'https://github.com/scrooloose/nerdcommenter.git'
 Plugin 'SirVer/ultisnips'
+"" Snippets
 Plugin 'honza/vim-snippets'
+"" CScope
+Plugin "git@github.com:brookhong/cscope.vim.git"
+
 
 call vundle#end()
 
@@ -179,23 +183,27 @@ au Syntax * RainbowParenthesesLoadChevrons
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"""""""""""""""" Airline """""""""""""""""""""""""""""
-" Show number of non-zero  modifications next to branch name in git repos
-"let g:airline#extensions#hunks#enabled = 1
-"let g:airline#extensions#hunks#non_zero_only = 1
+"" Cscope
+nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
+nnoremap <leader>l :call ToggleLocationList()<CR>
 
-"let g:airline#extensions#tabline#enabled = 1
+"s: Find this C symbol
+nnoremap  <leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
+" g: Find this definition
+nnoremap  <leader>fg :call CscopeFind('g', expand('<cword>'))<CR>
+" d: Find functions called by this function
+nnoremap  <leader>fd :call CscopeFind('d', expand('<cword>'))<CR>
+" c: Find functions calling this function
+nnoremap  <leader>fc :call CscopeFind('c', expand('<cword>'))<CR>
+" t: Find this text string
+nnoremap  <leader>ft :call CscopeFind('t', expand('<cword>'))<CR>
+" e: Find this egrep pattern
+nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
+" f: Find this file
+nnoremap  <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
+" i: Find files #including this file
+nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 
-"let g:airline_powerline_fonts = 1
-"let g:airline_symbols = {}                        " Allow use of custom symbols
-"let g:airline_symbols.branch = '⎇''
-"let g:airline#extensions#tabline#fnamemod = ':t'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""" Pymode """"""""""""""""""""""""
-"let g:pymode = 1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""" Mappings and Defines """"""""""""""""
 
