@@ -20,7 +20,9 @@ Plugin 'SirVer/ultisnips'
 "" Snippets
 Plugin 'honza/vim-snippets'
 "" CScope
-Plugin 'git@github.com:brookhong/cscope.vim.git'
+Plugin 'git@github.com:vim-scripts/cscope.vim.git'
+Plugin 'git@github.com:tpope/vim-surround.git'
+Plugin 'git@github.com:ctrlpvim/ctrlp.vim.git'
 
 
 call vundle#end()
@@ -30,7 +32,7 @@ filetype plugin indent on
 syntax on
 
 """""""""""" Working with Unicode """"""""""""""
-if has("multi_byte")
+if has('multi_byte')
   if &termencoding == ""
     let &termencoding = &encoding
   endif
