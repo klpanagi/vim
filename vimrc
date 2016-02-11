@@ -111,6 +111,7 @@ set incsearch           " Move through doc, while writing search pattern
 set hlsearch            " Highligh search patterns in text
 
 set backspace=indent,eol,start  " Enable backspace deletion mode
+set mouse=a
 
 
 let &colorcolumn="80,".join(range(120,999),",")    " Show 80 line vertical line
