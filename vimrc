@@ -215,8 +215,8 @@ nmap <C-j> <C-W>j
 nmap <C-h> <C-W>h
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-p> :tabprevious<CR>
+nnoremap <C-n> :tabnext<CR>
 
 " Switch between source files and header files quickly
 nnoremap <F4> <ESC>:AS<CR>
