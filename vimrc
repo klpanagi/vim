@@ -2,30 +2,29 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'Valloric/ListToggle'
-Plugin 'scrooloose/syntastic'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'ervandew/supertab'
+Plug 'tpope/vim-fugitive'
+Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/ListToggle'
+Plug 'scrooloose/syntastic'
+Plug 'flazz/vim-colorschemes'
+Plug 'scrooloose/nerdtree'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'ervandew/supertab'
 "" Nerd Commenter
-Plugin 'https://github.com/scrooloose/nerdcommenter.git'
-Plugin 'SirVer/ultisnips'
+Plug 'https://github.com/scrooloose/nerdcommenter.git'
+Plug 'SirVer/ultisnips'
 "" Snippets
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 "" CScope
-Plugin 'git@github.com:vim-scripts/cscope.vim.git'
-Plugin 'git@github.com:tpope/vim-surround.git'
-Plugin 'git@github.com:ctrlpvim/ctrlp.vim.git'
+Plug 'git@github.com:vim-scripts/cscope.vim.git'
+Plug 'git@github.com:tpope/vim-surround.git'
+Plug 'git@github.com:ctrlpvim/ctrlp.vim.git'
+Plug 'christoomey/vim-tmux-navigator'
 
-
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on
 
@@ -210,23 +209,24 @@ nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 
 """""""""""""""" Mappings and Defines """"""""""""""""
 
-" Movement Key Mappings
+" Splitted windows navigation
 nmap <C-j> <C-W>j
 nmap <C-h> <C-W>h
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
-nnoremap <C-p> :tabprevious<CR>
-nnoremap <C-n> :tabnext<CR>
+
+" Tab windows navigation
+noremap <C-W>k :tabprevious<CR>
+noremap <C-W>j :tabnext<CR>
+noremap <C-W>n :tabnew<CR>
+noremap <C-W>q :tabclose<CR>
 
 " Switch between source files and header files quickly
 nnoremap <F4> <ESC>:AS<CR>
-nnoremap <F5> <ESC>:AS<CR>
-
-nnoremap tn :tabnew<CR>
-nnoremap td :tabclose<CR>
+nnoremap <F6> <ESC>:AS<CR>
 
 " Remap commenting
-map - <Leader>ci
+map , <Leader>ci
 
 " Save file
 nmap <F2> :w<CR>
