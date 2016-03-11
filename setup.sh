@@ -2,8 +2,6 @@
 
 currentDir=$(dirname ${BASH_SOURCE[0]})
 
-VundleGit="git@github.com:VundleVim/Vundle.vim.git"
-
 sudo apt-get install vim cscope
 
 mkdir -p "${currentDir}/vim"
