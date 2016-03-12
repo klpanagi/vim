@@ -237,8 +237,8 @@ nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
 
 " Tab windows navigation
-noremap <C-W>k :tabprevious<CR>
-noremap <C-W>j :tabnext<CR>
+noremap <C-W>h :tabprevious<CR>
+noremap <C-W>l :tabnext<CR>
 noremap <C-W>n :tabnew<CR>
 noremap <C-W>q :tabclose<CR>
 
@@ -261,6 +261,8 @@ inoremap <F3> <ESC>:q!<CR>
 nmap <F8> :NERDTreeToggle<CR>
 inoremap <F8> <ESC>:NERDTreeToggle<CR>
 
+" Stamping
+nnoremap S diw"0P
 
 " Delete the contents of brackets
 imap dd{ <ESC>di{i
