@@ -118,7 +118,8 @@ let &colorcolumn="80,".join(range(120,999),",")    " Show 80 line vertical line
 
 
 "" Color Scheme configurations
-colorscheme molokai
+"colorscheme molokai
+colorscheme onedark
 
 
 """""""""""""""" Filetype Indentation Mode """"""""""""""""
@@ -160,6 +161,7 @@ call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('py', 'Magenta', 'none', '#ff00ff', '#151515')
 
 
 """""""" Whitespaces Plugin """"""""""
