@@ -42,6 +42,13 @@ if has('multi_byte')
   set fileencodings=ucs-bom,utf-8,latin1
 endif
 
+
+"""""""""""" Autoreload vimrc """"""""""""""""
+augroup reload_vimrc " {
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
+
 """""""""""" YouCOompleteMe """"""""""""""""""""
 
 let g:ycm_key_list_select_completion=[]
@@ -133,6 +140,15 @@ set cino=(2               " Behaviour of indentation in unclosed parenthesis
 set autoindent            " Keep indentation from previous line
 set smartindent           " Automatically inserts indentation in some cases
 set cindent               " Like smartindent, but stricter and more customisable
+
+
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <Tab> <C-t>
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gV
+vnoremap <S-Tab> <gV
+
 autocmd FileType make setlocal noexpandtab    " No expandtab in Makefile
 
 """"""""""""""""Nerd Tree enable """"""""""""""""
