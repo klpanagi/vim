@@ -125,8 +125,8 @@ let &colorcolumn="80,".join(range(120,999),",")    " Show 80 line vertical line
 
 
 "" Color Scheme configurations
-"colorscheme molokai
-colorscheme onedark
+colorscheme molokai
+"colorscheme onedark
 
 
 """""""""""""""" Filetype Indentation Mode """"""""""""""""
