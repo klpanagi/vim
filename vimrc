@@ -51,10 +51,8 @@ augroup END " }
 
 """""""""""" YouCOompleteMe """"""""""""""""""""
 
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
 let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_auto_trigger = 0
+let g:ycm_auto_trigger = 1
 
 let g:ycm_error_symbol = '✘'
 let g:ycm_warning_symbol = '✭'
@@ -64,12 +62,12 @@ let g:ycm_enable_diagnostic_signs = 1
 ""  present on a line, if any
 let g:ycm_enable_diagnostic_highlighting = 1
 let g:ycm_complete_in_comments = 0
-let g:ycm_complete_in_strings = 1
+let g:ycm_complete_in_strings = 0
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_global_ycm_extra_conf = ''
 
-"let g:ycm_use_ultisnips_completer = 1
+let g:ycm_use_ultisnips_completer = 1
 
 let g:ycm_filetype_blacklist = {
       \ 'tagbar' : 1,
@@ -103,10 +101,32 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
 
+
+""  turns on YCM's diagnostic display features
+let g:ycm_show_diagnostics_ui = 1
+
+
+let g:ycm_key_invoke_completion = '<tab>'
+"let g:ycm_key_list_select_completion=[]
+"let g:ycm_key_list_previous_completion=[]
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+"" better key bindings for UltiSnipsExpandTrigger
+"" UltiSnips ""
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-"" UltiSnips ""
-let g:UltiSnipsExpandTrigger="<s-tab>"
+"let g:UltiSnipsExpandTrigger="<c-tab>"
+"let g:UltiSnipsListSnippets="<c-s-tab>"
+" :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
 
 """"""""""""""""" Miscelaneous """""""""""""""""""""""
 set number 		"uto_initialization = 0 Show Line Numbers
@@ -142,12 +162,12 @@ set smartindent           " Automatically inserts indentation in some cases
 set cindent               " Like smartindent, but stricter and more customisable
 
 
-nnoremap <Tab> >>_
-nnoremap <S-Tab> <<_
-inoremap <Tab> <C-t>
-inoremap <S-Tab> <C-D>
-vnoremap <Tab> >gV
-vnoremap <S-Tab> <gV
+nnoremap <C-t> >>_
+nnoremap <C-d> <<_
+inoremap <C-t> <C-t>
+inoremap <C-d> <C-D>
+vnoremap <C-t> >gV
+vnoremap <C-d> <gV
 
 autocmd FileType make setlocal noexpandtab    " No expandtab in Makefile
 
