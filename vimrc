@@ -24,6 +24,7 @@ Plug 'git@github.com:tpope/vim-surround.git'
 Plug 'git@github.com:ctrlpvim/ctrlp.vim.git'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'shime/vim-livedown'
 
 call plug#end()
 
