@@ -306,6 +306,9 @@ nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 
 """""""""""""""" Mappings and Defines """"""""""""""""
 
+" Yank to the system clipboard
+vnoremap <C-c> "*y
+
 " Splitted windows navigation
 nmap <C-j> <C-W>j
 nmap <C-h> <C-W>h
