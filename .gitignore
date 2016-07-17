@@ -3,3 +3,8 @@ bundle/
 *.core
 core
 vim/
+autoload/
+plugged/
+
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
