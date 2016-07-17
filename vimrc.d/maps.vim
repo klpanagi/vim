@@ -34,8 +34,6 @@ inoremap <F2> <ESC>:NERDTreeToggle<CR>
 " Stamping
 nnoremap S diw"0P
 
-" Go to line line<Enter> - 123<Enter>
-"nnoremap <CR> G
 
 " Delete the contents of brackets
 imap dd{ <ESC>di{i

@@ -12,8 +12,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'ervandew/supertab'
 Plug 'https://github.com/scrooloose/nerdcommenter.git'
+Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'git@github.com:vim-scripts/cscope.vim.git'
@@ -24,7 +24,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'shime/vim-livedown'
 Plug 'tmhedberg/SimpylFold'
 Plug 'hynek/vim-python-pep8-indent'
-Plug 'tpope/vim-vinegar'
+Plug 'Raimondi/delimitMate'
+
+Plug 'pangloss/vim-javascript'
+Plug 'ternjs/tern_for_vim'
+
 
 call plug#end()
 
