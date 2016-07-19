@@ -52,6 +52,6 @@ set cindent               " Like smartindent, but stricter and more customisabl
     "\ set autoindent
     "\ set fileformat=unix
 
-colorscheme molokai
+colorscheme jellybeans
 
 let &colorcolumn="80,".join(range(120,999),",")    " Show 80 line vertical line
