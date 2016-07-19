@@ -29,6 +29,8 @@ Plug 'Raimondi/delimitMate'
 Plug 'pangloss/vim-javascript'
 Plug 'ternjs/tern_for_vim'
 
+Plug 'mhinz/vim-startify'
+
 
 call plug#end()
 
