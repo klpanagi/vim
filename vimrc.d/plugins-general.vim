@@ -122,7 +122,7 @@ nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 "" SECTION: Folding
 """""""""""""""""""""""""""""
 
-set foldmethod=indent           " Fold according to syntax type
+set foldmethod=syntax           " Fold according to syntax type
 set foldcolumn=1                " Show fold column next to numbers
 set foldlevelstart=20           " Start file with all folds open
 set foldminlines=4              " Fold only hunks with mre than 4 lines

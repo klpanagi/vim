@@ -92,3 +92,5 @@ vnoremap <C-d> <gV
 nnoremap <leader>c :call NERDComment(0,"toggle")<CR>
 vnoremap <leader>c :call NERDComment(0,"toggle")<CR>
 inoremap <leader>c <C-o>:call NERDComment(0,"toggle")<C-m>
+
+nnoremap <space> i<space><ESC><right>
