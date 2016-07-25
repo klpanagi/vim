@@ -18,6 +18,13 @@ vim +PlugInstall
 
 For more information check on YouCompleteMe repo [here](https://github.com/Valloric/YouCompleteMe)
 
+#### Fix missing libtinfo dependency in Arch Linux distributions
+
+You will have to install `libtinfo` from AUR. YCM links against `libtinfo.so.5` and installed from AUR is `libtinfo.so.6` so you will have to make a symlink:
+
+```bash
+sudo ln -s /lib64/libtinfo.so /lib64/libtinfo.so.5
+```
 
 **Language Support compilation flags**
 
