@@ -38,7 +38,7 @@ nnoremap S diw"0P
 " Delete the contents of brackets
 imap dd{ <ESC>di{i
 imap dd[ <ESC>di[i
-imap dd( <ESC>di(i
+imap dd( <ESC>di(
 imap dd' <ESC>di'i
 imap dd" <ESC>di"i
 imap dd< <ESC>di<i
@@ -94,3 +94,5 @@ vnoremap <leader>c :call NERDComment(0,"toggle")<CR>
 inoremap <leader>c <C-o>:call NERDComment(0,"toggle")<C-m>
 
 nnoremap <space> i<space><ESC><right>
+
+nnoremap <leader>sws :StripWhitespace<CR>
