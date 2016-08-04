@@ -28,6 +28,7 @@ Plug 'Raimondi/delimitMate'
 
 Plug 'pangloss/vim-javascript'
 Plug 'ternjs/tern_for_vim'
+Plug 'digitaltoad/vim-pug'
 
 Plug 'mhinz/vim-startify'
 
