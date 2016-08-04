@@ -28,8 +28,8 @@ nmap <F3> :q!<CR>
 inoremap <F3> <ESC>:q!<CR>
 
 " File tree
-nmap <F2> :NERDTreeToggle<CR>
-inoremap <F2> <ESC>:NERDTreeToggle<CR>
+nmap <F2> :NERDTreeToggle %<CR>
+inoremap <F2> <ESC>:NERDTreeToggle %<CR>
 
 " Stamping
 nnoremap S diw"0P
