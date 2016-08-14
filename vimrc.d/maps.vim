@@ -1,5 +1,7 @@
 let mapleader=","
 
+map <Esc>[B <Down>]
+
 " Yank to the system clipboard
 vnoremap <C-c> "*y
 
@@ -10,8 +12,8 @@ nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
 
 " Tab windows navigation
-noremap <C-W>h :tabprevious<CR>
-noremap <C-W>l :tabnext<CR>
+noremap <S-Left> :tabprevious<CR>
+noremap <S-Right> :tabnext<CR>
 noremap <C-W>n :tabnew<CR>
 noremap <C-W>q :tabclose<CR>
 

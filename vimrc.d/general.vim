@@ -29,6 +29,9 @@ augroup END " }
 
 autocmd FileType make setlocal noexpandtab    " No expandtab in Makefile
 
+" ColorScheme
+colorscheme jellybeans
+
 
 """""""""""""""""""""""""""""
 " SECTION: INDENTATION
@@ -52,6 +55,5 @@ set cindent               " Like smartindent, but stricter and more customisabl
     "\ set autoindent
     "\ set fileformat=unix
 
-colorscheme jellybeans
 
 let &colorcolumn="80,".join(range(120,999),",")    " Show 80 line vertical line
