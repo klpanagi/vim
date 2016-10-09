@@ -32,6 +32,8 @@ Plug 'digitaltoad/vim-pug'
 
 Plug 'mhinz/vim-startify'
 
+Plug 'tmux-plugins/vim-tmux'
+
 
 call plug#end()
 
