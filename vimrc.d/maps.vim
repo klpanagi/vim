@@ -81,6 +81,28 @@ nmap yy] yi]
 nmap yy) yi)
 nmap yy> yi>
 
+" Select the contents of brackets
+imap vv{ <ESC>vi{i
+imap vv[ <ESC>vi[i
+imap vv( <ESC>vi(i
+imap vv' <ESC>vi'i
+imap vv" <ESC>vi"i
+imap vv< <ESC>vi<i
+nmap vv{ vi{
+nmap vv[ vi[
+nmap vv( vi(
+nmap vv' vi'
+nmap vv" vi"
+nmap vv< vi<
+imap vv} <ESC>vi}i
+imap vv] <ESC>vi]i
+imap vv) <ESC>vi)i
+imap vv> <ESC>vi>i
+nmap vv} yi}
+nmap vv] vi]
+nmap vv) vi)
+nmap vv> vi>
+
 
 "" Indentation
 nnoremap <C-t> >>_
