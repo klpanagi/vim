@@ -34,6 +34,7 @@ Plug 'mhinz/vim-startify'
 
 Plug 'tmux-plugins/vim-tmux'
 
+Plug 'PotatoesMaster/i3-vim-syntax'
 
 call plug#end()
 
