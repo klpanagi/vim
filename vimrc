@@ -36,6 +36,11 @@ Plug 'tmux-plugins/vim-tmux'
 
 Plug 'PotatoesMaster/i3-vim-syntax'
 
+Plug 'airblade/vim-gitgutter'
+
+"Plug 'altercation/vim-colors-solarized'
+
+
 call plug#end()
 
 filetype plugin indent on

@@ -30,6 +30,9 @@ augroup END " }
 autocmd FileType make setlocal noexpandtab    " No expandtab in Makefile
 
 " ColorScheme
+set background=dark
+"let g:solarized_termcolors=256
+"colorscheme solarized
 colorscheme jellybeans
 
 
