@@ -40,6 +40,12 @@ Plug 'airblade/vim-gitgutter'
 
 "Plug 'altercation/vim-colors-solarized'
 
+Plug 'lervag/vimtex'
+Plug 'rhysd/vim-grammarous'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Shougo/unite.vim'
+Plug 'kana/vim-operator-user'
+
 
 call plug#end()
 
