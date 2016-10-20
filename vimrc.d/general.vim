@@ -59,4 +59,5 @@ set cindent               " Like smartindent, but stricter and more customisabl
     "\ set fileformat=unix
 
 
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn="80,".join(range(120,999),",")    " Show 80 line vertical line
