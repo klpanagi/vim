@@ -14,13 +14,20 @@ endif
 "" Plug Hooks {
 
 function! BuildYCM(info)
-	" info is a dictionary with 3 fields
-	" - name:   name of the plugin
-	" - status: 'installed', 'updated', or 'unchanged'
-	" - force:  set on PlugInstall! or PlugUpdate!
-	if a:info.status == 'installed' || a:info.force
-		!./install.py --clang-completer --tern-completer
-	endif
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py --clang-completer --tern-completer
+  endif
+endfunction
+
+
+function! BuildFzF(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install --all
+  endif
 endfunction
 
 "" }
@@ -70,6 +77,9 @@ Plug 'rhysd/vim-grammarous'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/unite.vim'
 Plug 'kana/vim-operator-user'
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': function('BuildFzF') }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
