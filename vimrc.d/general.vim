@@ -33,7 +33,7 @@ autocmd FileType make setlocal noexpandtab    " No expandtab in Makefile
 set background=dark
 "let g:solarized_termcolors=256
 "colorscheme solarized
-colorscheme jellybeans
+colorscheme jelleybeans
 
 
 """""""""""""""""""""""""""""

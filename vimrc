@@ -1,11 +1,36 @@
 set nocompatible
 filetype off
 
+"" Automatic Vim-Plug Installation {
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+"" }
+
+"" Plug Hooks {
+
+function! BuildYCM(info)
+	" info is a dictionary with 3 fields
+	" - name:   name of the plugin
+	" - status: 'installed', 'updated', or 'unchanged'
+	" - force:  set on PlugInstall! or PlugUpdate!
+	if a:info.status == 'installed' || a:info.force
+		!./install.py --clang-completer --tern-completer
+	endif
+endfunction
+
+"" }
+
+
 " set the runtime path to include Vundle and initialize
 call plug#begin()
 
 Plug 'tpope/vim-fugitive'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'Valloric/ListToggle'
 Plug 'scrooloose/syntastic'
 Plug 'flazz/vim-colorschemes'
@@ -46,7 +71,6 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/unite.vim'
 Plug 'kana/vim-operator-user'
 
-
 call plug#end()
 
 filetype plugin indent on
@@ -54,7 +78,7 @@ filetype plugin indent on
 syntax on
 
 "" Load vim config files
-for fpath in split(globpath('~/vim/vimrc.d/', '*.vim'), '\n')
+for fpath in split(globpath('~/.vim/vimrc.d/', '*.vim'), '\n')
   exe 'source' fpath
 endfor
 
