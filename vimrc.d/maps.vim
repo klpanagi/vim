@@ -2,6 +2,16 @@ let mapleader=","
 
 map <Esc>[B <Down>]
 
+" move to beginning/end of line
+nnoremap B ^
+nnoremap E $
+
+" Highlight last inserted text
+nnoremap gV `[v`]
+
+" Escape
+inoremap jk <esc>
+
 " Yank to the system clipboard
 vnoremap <C-c> "*y
 
@@ -28,10 +38,6 @@ inoremap <F8> <ESC>:w<CR>a
 " Quit file
 nmap <F3> :q!<CR>
 inoremap <F3> <ESC>:q!<CR>
-
-" File tree
-nmap <F2> :NERDTreeToggle %<CR>
-inoremap <F2> <ESC>:NERDTreeToggle %<CR>
 
 " Stamping
 nnoremap S diw"0P
@@ -104,19 +110,20 @@ nmap vv) vi)
 nmap vv> vi>
 
 
-"" Indentation
+"" Indentation --{
 nnoremap <C-t> >>_
 nnoremap <C-d> <<_
 inoremap <C-t> <C-t>
 inoremap <C-d> <C-D>
 vnoremap <C-t> >gV
 vnoremap <C-d> <gV
-
+" --}
 
 nnoremap <leader>c :call NERDComment(0,"toggle")<CR>
 vnoremap <leader>c :call NERDComment(0,"toggle")<CR>
 inoremap <leader>c <C-o>:call NERDComment(0,"toggle")<C-m>
 
+" Space character in normal mode
 nnoremap <space> i<space><ESC><right>
 
 nnoremap <leader>sws :StripWhitespace<CR>

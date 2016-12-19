@@ -10,31 +10,39 @@ if has('multi_byte')
 endif
 
 
-set number 		"uto_initialization = 0 Show Line Numbers
-set nocompatible   	" Stops explicit vi behavior
+set number
+set nocompatible
 set bg=dark
-set t_Co=256		" Set 256 color setting
 set laststatus=2        " Always show status line
 set incsearch           " Move through doc, while writing search pattern
 set hlsearch            " Highligh search patterns in text
+set cursorline          " Highlight current line
+set wildmenu            " visual autocomplete for command menu
+set showmatch           " highlight matching [{()}]
+
+if has('gui_running')
+else
+  set t_Co=256
+endif
 
 set backspace=indent,eol,start  " Enable backspace deletion mode
 set mouse=a
 
-"" Autoreload vimrc
-augroup reload_vimrc " {
+"" Autoreload vimrc {
+augroup reload_vimrc
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }
+augroup END
+" }
 
 autocmd FileType make setlocal noexpandtab    " No expandtab in Makefile
 
-" ColorScheme
+"" ColorScheme {
 set background=dark
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 "colorscheme solarized
-colorscheme jelleybeans
-
+colorscheme jellybeans
+" --}
 
 """""""""""""""""""""""""""""
 " SECTION: INDENTATION

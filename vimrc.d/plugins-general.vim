@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""""""
 "" SECTION: Rainbow parenthesis
 """"""""""""""""""""""""""""""""""
-
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
     \ ['Darkblue',    'SeaGreen3'],
@@ -32,15 +31,13 @@ au Syntax * RainbowParenthesesLoadBraces
 au Syntax * RainbowParenthesesLoadChevrons
 
 
-
 """""""""""""""""""""""""""""""""
 "" SECTION: Nerd Tree
 """""""""""""""""""""""""""""""""
-
 autocmd VimEnter * NERDTree     " Enable Nerdtree when vim starts
 autocmd VimEnter * wincmd p
 let NERDTreeDirArrows=0         " Use + ~ chars for directories
-let NERDTreeMinimalUI=1         " Remove excess information bars
+"let NERDTreeMinimalUI=1         " Remove excess information bars
 let NERDTreeShowBookmarks=1     " Show Bookmarks
 
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -48,7 +45,7 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
     exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
-" NERDTress File highlighting
+" NERDTress File highlighting --{
 call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
 call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
 call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
@@ -63,25 +60,29 @@ call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 call NERDTreeHighlightFile('py', 'Magenta', 'none', '#ff00ff', '#151515')
+" --}
 
 " Ignore files in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
+" Toggle NERDTree sidebar
+nmap <F2> :NERDTreeToggle %<CR>
+inoremap <F2> <ESC>:NERDTreeToggle %<CR>
 
 
-"""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""
 "" SECTION: Vim-Better-Whitespace
 """""""""""""""""""""""""""""
 highlight ExtraWhitespace ctermbg=red
 let g:better_whitespace_verbosity=1
-
+""""""""""""""""""""""""""""""""""""""
 
 
 
 """""""""""""""""""""""""""""
 "" SECTION: Livedown
 """""""""""""""""""""""""""""
-
 " should markdown preview get shown automatically upon opening markdown buffer
 let g:livedown_autorun = 0
 " " should the browser window pop-up upon previewing
@@ -89,7 +90,7 @@ let g:livedown_open = 1
 " " the port on which Livedown server will run
 let g:livedown_port = 1337
 " " the system command to launch a browser (ex. on linux)
-let g:livedown_browser = "chromium"
+let g:livedown_browser = "firefox"
 
 
 
@@ -121,7 +122,6 @@ nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 """""""""""""""""""""""""""""
 "" SECTION: Folding
 """""""""""""""""""""""""""""
-
 set foldmethod=syntax           " Fold according to syntax type
 set foldcolumn=1                " Show fold column next to numbers
 set foldlevelstart=20           " Start file with all folds open
@@ -135,7 +135,6 @@ let g:SimpylFold_docstring_preview = 1
 """""""""""""""""""""""""""""
 "" SECTION: Syntastic
 """""""""""""""""""""""""""""
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -146,9 +145,17 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_balloons = 1
 
-let g:syntastic_python_checkers=['flake8', 'python']
+let g:syntastic_python_checkers=['flake8']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_tex_checkers = []
 
+" Don't jump automatically.
+let g:syntastic_auto_jump = 0
+
+let g:syntastic_error_symbol = "✗"
+
+let g:syntastic_enable_highlighting = 1
 " Write all buffers before navigating from Vim to tmux pane
 let g:tmux_navigator_save_on_switch = 2
+
+inoremap <F6> <ESC>:lopen<CR>

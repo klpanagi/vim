@@ -1,4 +1,4 @@
 
-##
-#  python-flake8
+## Dependencies
+#  - python-flake8
 ##
