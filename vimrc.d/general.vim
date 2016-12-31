@@ -39,10 +39,11 @@ autocmd FileType make setlocal noexpandtab    " No expandtab in Makefile
 
 "" ColorScheme {
 set background=dark
-let g:solarized_termcolors=256
-"colorscheme solarized
-colorscheme jellybeans
+let g:rehash256=1
+let g:molokai_original=0
+colorscheme molokai
 " --}
+
 
 """""""""""""""""""""""""""""
 " SECTION: INDENTATION
@@ -55,17 +56,6 @@ set cino=(2               " Behaviour of indentation in unclosed parenthesis
 set autoindent            " Keep indentation from previous line
 set smartindent           " Automatically inserts indentation in some cases
 set cindent               " Like smartindent, but stricter and more customisabl
-
-" Add the proper PEP8 (Python) indentation
-"au BufNewFile,BufRead *.py
-    "\ set tabstop=4
-    "\ set softtabstop=4
-    "\ set shiftwidth=4
-    "\ set textwidth=79
-    "\ set expandtab
-    "\ set autoindent
-    "\ set fileformat=unix
-
 
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn="80,".join(range(120,999),",")    " Show 80 line vertical line

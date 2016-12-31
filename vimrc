@@ -33,14 +33,13 @@ endfunction
 "" }
 
 
-" set the runtime path to include Vundle and initialize
 call plug#begin()
 
+Plug 'digitaltoad/vim-pug'
 Plug 'tpope/vim-fugitive'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'Valloric/ListToggle'
 Plug 'scrooloose/syntastic'
-Plug 'nanotech/jellybeans.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'kien/rainbow_parentheses.vim'
@@ -48,40 +47,37 @@ Plug 'https://github.com/scrooloose/nerdcommenter.git'
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'https://github.com/vim-scripts/cscope.vim.git'
+Plug 'vim-scripts/cscope.vim'
 Plug 'https://github.com/tpope/vim-surround.git'
-Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'shime/vim-livedown'
-Plug 'hynek/vim-python-pep8-indent'
-"" https://github.com/search?utf8=%E2%9C%93&q=delimit
 Plug 'Raimondi/delimitMate'
-Plug 'python-mode/python-mode'
-
-Plug 'pangloss/vim-javascript'
-Plug 'ternjs/tern_for_vim'
-"" https://github.com/digitaltoad/vim-pug
-Plug 'digitaltoad/vim-pug'
-
 Plug 'mhinz/vim-startify'
-
 Plug 'tmux-plugins/vim-tmux'
-
 Plug 'PotatoesMaster/i3-vim-syntax'
-
 Plug 'airblade/vim-gitgutter'
-
-"Plug 'altercation/vim-colors-solarized'
-
+Plug 'flazz/vim-colorschemes'
 Plug 'lervag/vimtex'
 Plug 'rhysd/vim-grammarous'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/unite.vim'
 Plug 'kana/vim-operator-user'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': function('BuildFzF') }
-Plug 'junegunn/fzf.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+"" Python Plugins --{
+  Plug 'nvie/vim-flake8'
+  Plug 'hdima/python-syntax'
+  Plug 'hynek/vim-python-pep8-indent'
+"" --}
+
+"" JavaScript Plugins --{
+  Plug 'pangloss/vim-javascript'
+  Plug 'ternjs/tern_for_vim'
+"" --}
 
 call plug#end()
 
