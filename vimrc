@@ -69,7 +69,7 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 "" Python Plugins --{
-  Plug 'nvie/vim-flake8'
+  "Plug 'nvie/vim-flake8'
   Plug 'hdima/python-syntax'
   Plug 'hynek/vim-python-pep8-indent'
 "" --}
