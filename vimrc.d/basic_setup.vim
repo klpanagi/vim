@@ -5,10 +5,11 @@ if has('multi_byte')
   endif
   set encoding=utf-8
   setglobal fileencoding=utf-8
-  "setglobal bomb
+  setglobal bomb
+  set binary
+  set ttyfast
   set fileencodings=ucs-bom,utf-8,latin1
 endif
-
 
 set number
 set nocompatible
@@ -28,26 +29,6 @@ endif
 set backspace=indent,eol,start  " Enable backspace deletion mode
 set mouse=a
 
-"" Autoreload vimrc {
-augroup reload_vimrc
-  autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END
-" }
-
-autocmd FileType make setlocal noexpandtab    " No expandtab in Makefile
-
-"" ColorScheme {
-set background=dark
-let g:rehash256=1
-let g:molokai_original=0
-colorscheme molokai
-" --}
-
-
-"""""""""""""""""""""""""""""
-" SECTION: INDENTATION
-"""""""""""""""""""""""""""""
 filetype indent on        " Indent document according to filetype
 set expandtab             " Use whitespace instead of tab
 set shiftwidth=2          " Use two spaces indetation with reindent (<< or >>)
@@ -59,3 +40,25 @@ set cindent               " Like smartindent, but stricter and more customisabl
 
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn="80,".join(range(120,999),",")    " Show 80 line vertical line
+
+"" Searching --{
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+"" --}
+
+"set fileformats=unix,dos,mac
+"set showcmd
+"set shell=/bin/sh
+
+"" Map leader to ,
+let mapleader=','
+
+"" Autoreload vimrc --{
+augroup reload_vimrc
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
+""  --}
+

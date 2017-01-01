@@ -44,9 +44,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'https://github.com/scrooloose/nerdcommenter.git'
+
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+
+Plug 'sheerun/vim-polyglot' "A collection of language packs for Vim
+
 Plug 'vim-scripts/cscope.vim'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -69,7 +73,6 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 "" Python Plugins --{
-  "Plug 'nvie/vim-flake8'
   Plug 'hdima/python-syntax'
   Plug 'hynek/vim-python-pep8-indent'
 "" --}
