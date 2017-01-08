@@ -21,7 +21,13 @@ set cursorline          " Highlight current line
 set wildmenu            " visual autocomplete for command menu
 set showmatch           " highlight matching [{()}]
 
+
 if has('gui_running')
+  noremap <C-V> "+gP
+  inoremap <C-V> <ESC><C-V>i
+  vnoremap <C-C> "+y
+  set clipboard=unnamedplus
+  "set guioptions+=a
 else
   set t_Co=256
 endif
