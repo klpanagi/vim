@@ -23,7 +23,7 @@ set showmatch           " highlight matching [{()}]
 
 
 if has('gui_running')
-  noremap <C-V> "+gP
+  nnoremap <C-V> "+gP
   inoremap <C-V> <ESC><C-V>i
   vnoremap <C-C> "+y
   set clipboard=unnamedplus
@@ -54,9 +54,9 @@ set ignorecase
 set smartcase
 "" --}
 
-"set fileformats=unix,dos,mac
-"set showcmd
-"set shell=/bin/sh
+set fileformats=unix
+set showcmd
+set shell=/bin/sh
 
 "" Map leader to ,
 let mapleader=','
@@ -68,3 +68,9 @@ augroup reload_vimrc
 augroup END
 ""  --}
 
+"" Disable annoying beeping and flashing -----{
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
+"" -----}

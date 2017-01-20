@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-"" Automatic Vim-Plug Installation {
+"" Automatic Vim-Plug Installation -----{
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -9,9 +9,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-"" }
+"" -----}
 
-"" Plug Hooks {
+"" Plug Hooks -----{
 
 function! BuildYCM(info)
   " info is a dictionary with 3 fields
@@ -30,7 +30,7 @@ function! BuildFzF(info)
   endif
 endfunction
 
-"" }
+"" -----}
 
 
 call plug#begin()
@@ -43,14 +43,14 @@ Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'https://github.com/scrooloose/nerdcommenter.git'
+Plug 'scrooloose/nerdcommenter'
 
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 Plug 'sheerun/vim-polyglot' "A collection of language packs for Vim
-
+   
 Plug 'vim-scripts/cscope.vim'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'ctrlpvim/ctrlp.vim'
