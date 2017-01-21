@@ -99,21 +99,21 @@ let g:livedown_browser = "firefox"
   "nnoremap <leader>l :call ToggleLocationList()<CR>
 
   "s: Find this C symbol
-  nnoremap  <leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
+  nnoremap  <leader>fs :call cscope#find('s', expand('<cword>'))<CR>
   " g: Find this definition
-  nnoremap  <leader>fg :call CscopeFind('g', expand('<cword>'))<CR>
+  nnoremap  <leader>fg :call cscope#find('g', expand('<cword>'))<CR>
   " d: Find functions called by this function
-  nnoremap  <leader>fd :call CscopeFind('d', expand('<cword>'))<CR>
+  nnoremap  <leader>fd :call cscope#find('d', expand('<cword>'))<CR>
   " c: Find functions calling this function
-  nnoremap  <leader>fc :call CscopeFind('c', expand('<cword>'))<CR>
+  nnoremap  <leader>fc :call cscope#findd('c', expand('<cword>'))<CR>
   " t: Find this text string
-  nnoremap  <leader>ft :call CscopeFind('t', expand('<cword>'))<CR>
+  nnoremap  <leader>ft :call cscope#find('t', expand('<cword>'))<CR>
   " e: Find this egrep pattern
-  nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
+  nnoremap  <leader>fe :call cscope#find('e', expand('<cword>'))<CR>
   " f: Find this file
-  nnoremap  <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
+  nnoremap  <leader>ff :call cscope#find('f', expand('<cword>'))<CR>
   " i: Find files #including this file
-  nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
+  nnoremap  <leader>fi :call cscope#find('i', expand('<cword>'))<CR>
 
 """""""""""""""""""""""""""""
 "" SECTION: Folding
@@ -140,3 +140,7 @@ let g:webdevicons_enable_unite = 1
 let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
 let g:webdevicons_enable_flagship_statusline = 1
+
+let g:tagbar_type_javascript = {
+    \ 'ctagsbin' : '/usr/bin/jsctags'
+\ }

@@ -26,18 +26,32 @@ function! BuildFzF(info)
     !./install --all
   endif
 endfunction
+
+function! BuildTagbar(info)
+  !sudo npm install -g tern
+  !sudo npm install -g git+https://github.com/ramitos/jsctags.git
+endfunction
+
 "" -----}
+
 
 call plug#begin('~/.vim/plugged')
   Plug 'digitaltoad/vim-pug'
+  Plug 'Shougo/unite.vim'
   Plug 'ryanoasis/vim-devicons'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-endwise'
+  Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
 
   Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM'), 'on': [] }
   Plug 'SirVer/ultisnips', { 'on': [] } | Plug 'ervandew/supertab' | Plug 'honza/vim-snippets'
 
-  Plug 'scrooloose/syntastic'
+  if !has('nvim')
+    Plug 'scrooloose/syntastic'
+    Plug 'PotatoesMaster/i3-vim-syntax'
+    Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+  endif
+    Plug 'neomake/neomake'
 
   Plug 'Valloric/ListToggle'
   Plug 'ntpeters/vim-better-whitespace'
@@ -45,7 +59,7 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'scrooloose/nerdtree'
   Plug 'scrooloose/nerdcommenter'
-
+  Plug 'Xuyuanp/nerdtree-git-plugin'
 
   Plug 'sheerun/vim-polyglot' "A collection of language packs for Vim
      
@@ -57,21 +71,17 @@ call plug#begin('~/.vim/plugged')
   Plug 'wellle/tmux-complete.vim'
   Plug 'tmux-plugins/vim-tmux'
 
-  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'shime/vim-livedown'
+  Plug 'lervag/vimtex'
   Plug 'Raimondi/delimitMate'
   Plug 'mhinz/vim-startify'
-  Plug 'PotatoesMaster/i3-vim-syntax'
   Plug 'airblade/vim-gitgutter'
   Plug 'flazz/vim-colorschemes'
-  Plug 'lervag/vimtex'
   Plug 'rhysd/vim-grammarous'
-  Plug 'Shougo/unite.vim'
   Plug 'kana/vim-operator-user'
 
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': function('BuildFzF') }
   Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-  Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
   "" Python Plugins --{
   Plug 'hdima/python-syntax'
