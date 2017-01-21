@@ -11,6 +11,8 @@ if has('multi_byte')
   set fileencodings=ucs-bom,utf-8,latin1
 endif
 
+set encoding=utf-8
+
 set number
 set nocompatible
 set bg=dark
@@ -61,12 +63,12 @@ set shell=/bin/sh
 "" Map leader to ,
 let mapleader=','
 
-"" Autoreload vimrc --{
+"" Autoreload vimrc -----{
 augroup reload_vimrc
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
-""  --}
+""  -----}
 
 "" Disable annoying beeping and flashing -----{
 set noerrorbells visualbell t_vb=

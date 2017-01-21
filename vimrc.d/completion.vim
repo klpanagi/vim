@@ -19,7 +19,6 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-
 let g:ycm_global_ycm_extra_conf = ''
 
 let g:ycm_use_ultisnips_completer = 1
@@ -59,19 +58,16 @@ let g:ycm_semantic_triggers =  {
 ""@ Preview Window
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-
-let g:ycm_key_invoke_completion = '<tab>'
-"let g:ycm_key_list_select_completion=[]
-"let g:ycm_key_list_previous_completion=[]
-
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>']
-let g:ycm_key_list_previous_completion = ['<C-p>']
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
-"" better key bindings for UltiSnipsExpandTrigger
-"" UltiSnips ""
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger="<s-space>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>" " you can use <c-j>
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" UltiSnip
+" ---------
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsListSnippets="<c-l>"
+highlight Pmenu ctermfg=2 ctermbg=3 guifg=#ffffff guibg=#0000ff

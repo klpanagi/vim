@@ -85,11 +85,9 @@ let g:better_whitespace_verbosity=1
 """""""""""""""""""""""""""""
 " should markdown preview get shown automatically upon opening markdown buffer
 let g:livedown_autorun = 0
-" " should the browser window pop-up upon previewing
+" should the browser window pop-up upon previewing
 let g:livedown_open = 1
-" " the port on which Livedown server will run
 let g:livedown_port = 1337
-" " the system command to launch a browser (ex. on linux)
 let g:livedown_browser = "firefox"
 
 
@@ -97,27 +95,25 @@ let g:livedown_browser = "firefox"
 """""""""""""""""""""""""""""
 "" SECTION: Cscope
 """""""""""""""""""""""""""""
-nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
-"nnoremap <leader>l :call ToggleLocationList()<CR>
+  nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
+  "nnoremap <leader>l :call ToggleLocationList()<CR>
 
-"s: Find this C symbol
-nnoremap  <leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
-" g: Find this definition
-nnoremap  <leader>fg :call CscopeFind('g', expand('<cword>'))<CR>
-" d: Find functions called by this function
-nnoremap  <leader>fd :call CscopeFind('d', expand('<cword>'))<CR>
-" c: Find functions calling this function
-nnoremap  <leader>fc :call CscopeFind('c', expand('<cword>'))<CR>
-" t: Find this text string
-nnoremap  <leader>ft :call CscopeFind('t', expand('<cword>'))<CR>
-" e: Find this egrep pattern
-nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
-" f: Find this file
-nnoremap  <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
-" i: Find files #including this file
-nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
-
-
+  "s: Find this C symbol
+  nnoremap  <leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
+  " g: Find this definition
+  nnoremap  <leader>fg :call CscopeFind('g', expand('<cword>'))<CR>
+  " d: Find functions called by this function
+  nnoremap  <leader>fd :call CscopeFind('d', expand('<cword>'))<CR>
+  " c: Find functions calling this function
+  nnoremap  <leader>fc :call CscopeFind('c', expand('<cword>'))<CR>
+  " t: Find this text string
+  nnoremap  <leader>ft :call CscopeFind('t', expand('<cword>'))<CR>
+  " e: Find this egrep pattern
+  nnoremap  <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
+  " f: Find this file
+  nnoremap  <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
+  " i: Find files #including this file
+  nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 
 """""""""""""""""""""""""""""
 "" SECTION: Folding
@@ -130,3 +126,17 @@ set foldminlines=4              " Fold only hunks with mre than 4 lines
 nnoremap <leader>f za
 let g:SimpylFold_docstring_preview = 1
 
+
+"""""""""""""""""""""""""""""
+"" SECTION: Others
+"""""""""""""""""""""""""""""
+let g:tmuxcomplete#trigger = 'omnifunc'
+let g:plug_url_format = 'git@github.com:%s.git'
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+let g:airline_powerline_fonts = 1
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_nerdtree = 1
+let g:webdevicons_enable_unite = 1
+let g:webdevicons_enable_airline_tabline = 1
+let g:webdevicons_enable_airline_statusline = 1
+let g:webdevicons_enable_flagship_statusline = 1
