@@ -123,7 +123,7 @@ set foldcolumn=1                " Show fold column next to numbers
 set foldlevelstart=20           " Start file with all folds open
 set foldminlines=4              " Fold only hunks with mre than 4 lines
 " Enable folding with the spacebar
-nnoremap <leader>f za
+nnoremap <leader>fl za
 let g:SimpylFold_docstring_preview = 1
 
 
