@@ -67,12 +67,15 @@ Plug 'vim-scripts/cscope.vim'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'ctrlpvim/ctrlp.vim'
 
+Plug 'LaTeX-Suite-aka-Vim-LaTeX'
+Plug 'xuhdev/vim-latex-live-preview'
+
+
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wellle/tmux-complete.vim'
 Plug 'tmux-plugins/vim-tmux'
 
 Plug 'shime/vim-livedown'
-Plug 'lervag/vimtex'
 Plug 'Raimondi/delimitMate'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
@@ -85,7 +88,6 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 "" Python Plugins --{
 Plug 'hdima/python-syntax'
-
 "" --}
 
 "" JavaScript Plugins --{
