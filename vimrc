@@ -35,11 +35,11 @@ endfunction
 
 
 call plug#begin('~/.vim/plugged')
-Plug 'digitaltoad/vim-pug'
 Plug 'Shougo/unite.vim'
-Plug 'ryanoasis/vim-devicons'
+"" Vim script for text filtering and alignment 
+Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-endwise'
+""  Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
 
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM'), 'on': [] }
@@ -68,8 +68,6 @@ Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'LaTeX-Suite-aka-Vim-LaTeX'
-Plug 'xuhdev/vim-latex-live-preview'
-
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wellle/tmux-complete.vim'
@@ -93,6 +91,7 @@ Plug 'hdima/python-syntax'
 "" JavaScript Plugins --{
 Plug 'pangloss/vim-javascript'
 Plug 'ternjs/tern_for_vim'
+Plug 'digitaltoad/vim-pug'
 "" --}
 
 Plug 'mhinz/vim-rfc'

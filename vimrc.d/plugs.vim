@@ -120,8 +120,6 @@ set foldmethod=syntax           " Fold according to syntax type
 set foldcolumn=1                " Show fold column next to numbers
 set foldlevelstart=20           " Start file with all folds open
 set foldminlines=4              " Fold only hunks with mre than 4 lines
-" Enable folding with the spacebar
-nnoremap <leader>fl za
 let g:SimpylFold_docstring_preview = 1
 
 
@@ -132,13 +130,6 @@ let g:tmuxcomplete#trigger = 'omnifunc'
 let g:plug_url_format = 'git@github.com:%s.git'
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 let g:airline_powerline_fonts = 1
-let g:webdevicons_enable = 1
-let g:webdevicons_enable_nerdtree = 1
-let g:webdevicons_enable_unite = 1
-let g:webdevicons_enable_airline_tabline = 1
-let g:webdevicons_enable_airline_statusline = 1
-let g:webdevicons_enable_flagship_statusline = 1
-
 let g:tagbar_type_javascript = {
     \ 'ctagsbin' : '/usr/bin/jsctags'
 \ }
