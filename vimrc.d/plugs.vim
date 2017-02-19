@@ -34,10 +34,8 @@ au Syntax * RainbowParenthesesLoadChevrons
 """""""""""""""""""""""""""""""""
 "" SECTION: Nerd Tree
 """""""""""""""""""""""""""""""""
-autocmd VimEnter * NERDTree     " Enable Nerdtree when vim starts
-autocmd VimEnter * wincmd p
-let NERDTreeDirArrows=0         " Use + ~ chars for directories
-"let NERDTreeMinimalUI=1         " Remove excess information bars
+let NERDTreeDirArrows=1         " Use + ~ chars for directories
+let NERDTreeMinimalUI=1         " Remove excess information bars
 let NERDTreeShowBookmarks=1     " Show Bookmarks
 
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
@@ -146,7 +144,6 @@ let g:tagbar_type_javascript = {
 \ }
 
 let g:vim_markdown_toc_autofit = 1
-set conceallevel=2
 let g:vim_markdown_autowrite = 1
 let g:vim_markdown_new_list_item_indent = 4
 let g:vim_markdown_frontmatter = 1

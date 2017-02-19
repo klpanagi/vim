@@ -63,7 +63,7 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger="<s-space>"
+let g:UltiSnipsExpandTrigger="<c-space>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>" " you can use <c-j>
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " UltiSnip
