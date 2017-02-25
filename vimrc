@@ -67,8 +67,6 @@ Plug 'vim-scripts/cscope.vim'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'LaTeX-Suite-aka-Vim-LaTeX'
-
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wellle/tmux-complete.vim'
 Plug 'tmux-plugins/vim-tmux'
@@ -116,4 +114,3 @@ syntax on
 for fpath in split(globpath('~/.vim/vimrc.d/', '*.vim'), '\n')
   exe 'source' fpath
 endfor
-

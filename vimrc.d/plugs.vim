@@ -139,3 +139,7 @@ let g:vim_markdown_autowrite = 1
 let g:vim_markdown_new_list_item_indent = 4
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_json_frontmatter = 1
+
+
+set complete+=kspell
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
