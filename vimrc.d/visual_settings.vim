@@ -21,7 +21,7 @@ if (has("termguicolors"))
 endif
 
 let g:airline_theme='onedark'
-let g:onedark_terminal_italics=1
+"let g:onedark_terminal_italics=1
 colorscheme onedark
 "" ------------------}
 
