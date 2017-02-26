@@ -30,8 +30,6 @@ if has('gui_running')
   vnoremap <C-C> "+y
   set clipboard=unnamedplus
   "set guioptions+=a
-else
-  set t_Co=256
 endif
 
 set backspace=indent,eol,start  " Enable backspace deletion mode
