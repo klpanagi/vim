@@ -17,15 +17,13 @@ if (has("nvim"))
 endif
 if (has("termguicolors"))
   set termguicolors
-else
-  set notermguicolors
 endif
 "endif
 
 "let g:onedark_termcolors=16
-let g:airline_theme='onedark'
-let g:onedark_terminal_italics=1
-colorscheme onedark
+let g:one_allow_italics = 1
+colorscheme one
+set background=dark
 "" ------------------}
 
 set mousemodel=popup
