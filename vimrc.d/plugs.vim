@@ -142,4 +142,5 @@ let g:vim_markdown_json_frontmatter = 1
 
 
 set complete+=kspell
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+
+let python_highlight_all = 1
