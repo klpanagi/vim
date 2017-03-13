@@ -64,3 +64,5 @@ set titlestring=%F
 if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
 endif
+
+highlight Pmenu ctermfg=2 ctermbg=3 guifg=#ffffff guibg=#0000ff

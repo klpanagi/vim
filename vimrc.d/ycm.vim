@@ -61,13 +61,3 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger="<c-space>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>" " you can use <c-j>
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-" UltiSnip
-" ---------
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsListSnippets="<c-l>"
-highlight Pmenu ctermfg=2 ctermbg=3 guifg=#ffffff guibg=#0000ff

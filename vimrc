@@ -35,6 +35,19 @@ endfunction
 
 
 call plug#begin('~/.vim/plugged')
+
+Plug 'neomake/neomake'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+"" Deoplete sources -----{
+Plug 'zchee/deoplete-jedi', { 'do': 'sudo pip install jedi' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
+Plug 'tweekmonster/deoplete-clang2'
+Plug 'wellle/tmux-complete.vim'
+Plug 'zchee/deoplete-zsh'
+Plug 'Shougo/neco-vim'
+"" ------------------}
+
 Plug 'Shougo/unite.vim'
 "" Vim script for text filtering and alignment 
 Plug 'godlygeek/tabular'
@@ -42,16 +55,11 @@ Plug 'tpope/vim-fugitive'
 ""  Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
 
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM'), 'on': [] }
-Plug 'SirVer/ultisnips', { 'on': [] } | Plug 'ervandew/supertab' | Plug 'honza/vim-snippets'
-
-if !has('nvim')
-  Plug 'scrooloose/syntastic'
-  Plug 'PotatoesMaster/i3-vim-syntax'
-  Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-endif
-
-Plug 'neomake/neomake'
+"" Code Snippets ---{
+Plug 'SirVer/ultisnips', { 'on': [] }
+Plug 'ervandew/supertab'
+Plug 'honza/vim-snippets'
+"" ---------------}
 
 Plug 'Valloric/ListToggle'
 Plug 'ntpeters/vim-better-whitespace'
@@ -75,12 +83,12 @@ Plug 'shime/vim-livedown'
 Plug 'Raimondi/delimitMate'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
-"Plug 'flazz/vim-colorschemes'
+
 Plug 'rakr/vim-one'
+
 Plug 'rhysd/vim-grammarous'
 Plug 'kana/vim-operator-user'
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': function('BuildFzF') }
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 "" Python Plugins --{
@@ -99,14 +107,6 @@ Plug 'vim-scripts/rfc-syntax', { 'for': 'rfc' }
 Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
 call plug#end()
-
-"" Load YCM and Ultisnips first time in insert mode -----{
-augroup load_us_ycm
-  autocmd!
-  autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe')
-                     \| autocmd! load_us_ycm
-augroup END
-"" -----}
 
 filetype plugin indent on
 syntax on
