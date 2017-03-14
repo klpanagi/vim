@@ -38,7 +38,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 "" Deoplete sources -----{
 Plug 'zchee/deoplete-jedi', { 'do': 'sudo pip install jedi' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
@@ -47,65 +46,47 @@ Plug 'wellle/tmux-complete.vim'
 Plug 'zchee/deoplete-zsh'
 Plug 'Shougo/neco-vim'
 "" ------------------}
-
+Plug 'rakr/vim-one'
 Plug 'Shougo/unite.vim'
 "" Vim script for text filtering and alignment 
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
 ""  Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
-
 "" Code Snippets ---{
-Plug 'SirVer/ultisnips', { 'on': [] }
-Plug 'ervandew/supertab'
+Plug 'Shougo/neosnippet'
 Plug 'honza/vim-snippets'
 "" ---------------}
-
+Plug 'tpope/vim-commentary'
 Plug 'Valloric/ListToggle'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'kien/rainbow_parentheses.vim'
-
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
 Plug 'sheerun/vim-polyglot' "A collection of language packs for Vim
-   
-Plug 'vim-scripts/cscope.vim'
-Plug 'https://github.com/tpope/vim-surround.git'
-Plug 'ctrlpvim/ctrlp.vim'
-
+Plug 'tpope/vim-surround.git'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'wellle/tmux-complete.vim'
 Plug 'tmux-plugins/vim-tmux'
-
-Plug 'shime/vim-livedown'
 Plug 'Raimondi/delimitMate'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
-
-Plug 'rakr/vim-one'
-
 Plug 'rhysd/vim-grammarous'
 Plug 'kana/vim-operator-user'
-
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-
+Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 "" Python Plugins --{
 Plug 'hdima/python-syntax'
+Plug 'heavenshell/vim-pydocstring'
 "" --}
-
 "" JavaScript Plugins --{
 Plug 'pangloss/vim-javascript'
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'digitaltoad/vim-pug'
 "" --}
-
 Plug 'mhinz/vim-rfc'
 Plug 'vim-scripts/rfc-syntax', { 'for': 'rfc' }
-
 Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
+Plug 'shime/vim-livedown'
+
 call plug#end()
 
 filetype plugin indent on
