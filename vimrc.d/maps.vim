@@ -17,10 +17,16 @@ inoremap jk <esc>
 vnoremap <C-c> "*y
 
 " Splitted windows navigation
-nmap <C-j> <C-W>j
-nmap <C-h> <C-W>h
-nmap <C-k> <C-W>k
-nmap <C-l> <C-W>l
+nnoremap <C-j> <C-W>j
+nnoremap <C-h> <C-W>h
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+
+" Terminfo ASCII Character fix:
+" https://github.com/neovim/neovim/issues/2048#issuecomment-78534227
+if has('nvim')
+  nmap <bs> :<c-u>TmuxNavigateLeft<cr>
+endif
 
 " Tab windows navigation
 noremap <S-Left> :tabprevious<CR>

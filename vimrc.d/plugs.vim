@@ -140,7 +140,8 @@ let g:vim_markdown_new_list_item_indent = 4
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_json_frontmatter = 1
 
-
 set complete+=kspell
 
 let python_highlight_all = 1
+
+nmap <silent> <C-.> <Plug>(pydocstring)

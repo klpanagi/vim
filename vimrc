@@ -86,7 +86,7 @@ Plug 'vim-scripts/rfc-syntax', { 'for': 'rfc' }
 Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
 Plug 'shime/vim-livedown'
-
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 filetype plugin indent on
