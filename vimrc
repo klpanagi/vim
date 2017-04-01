@@ -41,7 +41,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "" Deoplete sources -----{
 Plug 'zchee/deoplete-jedi', { 'do': 'sudo pip install jedi' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
-Plug 'tweekmonster/deoplete-clang2'
+Plug 'zchee/deoplete-clang'
 Plug 'wellle/tmux-complete.vim'
 Plug 'zchee/deoplete-zsh'
 Plug 'Shougo/neco-vim'
