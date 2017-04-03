@@ -1,36 +1,3 @@
-""""""""""""""""""""""""""""""""""
-"" SECTION: Rainbow parenthesis
-""""""""""""""""""""""""""""""""""
-let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
-
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
-
-"" Always On
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-au Syntax * RainbowParenthesesLoadChevrons
-
-
 """""""""""""""""""""""""""""""""
 "" SECTION: Nerd Tree
 """""""""""""""""""""""""""""""""
@@ -72,10 +39,9 @@ inoremap <F2> <ESC>:NERDTreeToggle %<CR>
 """"""""""""""""""""""""""""""""""""""
 "" SECTION: Vim-Better-Whitespace
 """""""""""""""""""""""""""""
-highlight ExtraWhitespace ctermbg=red
+highlight ExtraWhitespace ctermbg=yellow
 let g:better_whitespace_verbosity=1
 """"""""""""""""""""""""""""""""""""""
-
 
 
 """""""""""""""""""""""""""""
@@ -112,6 +78,7 @@ nnoremap  <leader>fe :call cscope#find('e', expand('<cword>'))<CR>
 nnoremap  <leader>ff :call cscope#find('f', expand('<cword>'))<CR>
 " i: Find files #including this file
 nnoremap  <leader>fi :call cscope#find('i', expand('<cword>'))<CR>
+
 
 """""""""""""""""""""""""""""
 "" SECTION: Folding
