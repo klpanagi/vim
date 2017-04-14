@@ -112,3 +112,7 @@ set complete+=kspell
 let python_highlight_all = 1
 
 nmap <silent> <C-.> <Plug>(pydocstring)
+
+let g:markdown_composer_autostart=1
+let g:markdown_composer_browser="firefox"
+let g:markdown_composer_syntax_theme="atom-one-dark"

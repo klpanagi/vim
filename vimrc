@@ -33,6 +33,12 @@ function! BuildTagbar(info)
 endfunction
 "" -----}
 
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    !cargo build --release
+  endif
+endfunction
+
 
 call plug#begin('~/.vim/plugged')
 
@@ -50,7 +56,6 @@ Plug 'rakr/vim-one'
 Plug 'Shougo/unite.vim'
 "" Vim script for text filtering and alignment 
 Plug 'godlygeek/tabular'
-Plug 'tpope/vim-fugitive'
 ""  Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
 "" Code Snippets ---{
@@ -61,14 +66,22 @@ Plug 'tpope/vim-commentary'
 Plug 'Valloric/ListToggle'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'sheerun/vim-polyglot' "A collection of language packs for Vim
-Plug 'tpope/vim-surround.git'
+
+"" Vim and Tmux together ------------{
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+"" ----------------------------------}
+
+"" Git related -----------------{
+Plug 'airblade/vim-gitgutter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+"" -----------------------------}
+
 Plug 'Raimondi/delimitMate'
 Plug 'mhinz/vim-startify'
-Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/vim-grammarous'
 Plug 'kana/vim-operator-user'
 Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
@@ -83,9 +96,11 @@ Plug 'digitaltoad/vim-pug'
 "" --}
 Plug 'mhinz/vim-rfc'
 Plug 'vim-scripts/rfc-syntax', { 'for': 'rfc' }
-Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
-Plug 'shime/vim-livedown'
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+Plug 'plasticboy/vim-markdown'
+
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
