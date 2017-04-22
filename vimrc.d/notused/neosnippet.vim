@@ -1,5 +1,3 @@
-let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
-
 xmap <C-Space> <Plug>(neosnippet_expand_target)
 imap <C-Space> <Plug>(neosnippet_expand_or_jump)
 smap <C-Space> <Plug>(neosnippet_expand_or_jump)
@@ -32,6 +30,8 @@ endif
 
 
 " Enable snipMate compatibility feature.
-let g:neosnippet#enable_snipmate_compatibility = 1
+" let g:neosnippet#enable_snipmate_compatibility = 1
 
-let g:neosnippet#disable_runtime_snippets = { '_' : 1 }
+" let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
+
+" let g:neosnippet#disable_runtime_snippets = { '_' : 1 }

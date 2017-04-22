@@ -44,6 +44,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neomake/neomake'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ervandew/supertab'
 "" Deoplete sources -----{
 Plug 'zchee/deoplete-jedi', { 'do': 'sudo pip install jedi' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
@@ -59,8 +60,8 @@ Plug 'godlygeek/tabular'
 ""  Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
 "" Code Snippets ---{
-Plug 'Shougo/neosnippet'
 Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 "" ---------------}
 Plug 'tpope/vim-commentary'
 Plug 'Valloric/ListToggle'

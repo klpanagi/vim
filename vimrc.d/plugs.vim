@@ -116,3 +116,6 @@ nmap <silent> <C-.> <Plug>(pydocstring)
 let g:markdown_composer_autostart=1
 let g:markdown_composer_browser="firefox"
 let g:markdown_composer_syntax_theme="atom-one-dark"
+
+" Navigate the completion menu from top to bottom
+let g:SuperTabDefaultCompletionType = "<c-n>"
