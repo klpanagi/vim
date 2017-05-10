@@ -42,7 +42,11 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'neomake/neomake'
+Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
+Plug 'milkypostman/vim-togglelist'
+
+Plug 'Chiel92/vim-autoformat'
+
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
 "" Deoplete sources -----{
@@ -64,10 +68,11 @@ Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 "" ---------------}
 Plug 'tpope/vim-commentary'
-Plug 'Valloric/ListToggle'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot' "A collection of language packs for Vim
+
+Plug 'vim-scripts/DoxygenToolkit.vim'
 
 "" Vim and Tmux together ------------{
 Plug 'christoomey/vim-tmux-navigator'

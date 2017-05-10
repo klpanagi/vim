@@ -43,8 +43,8 @@ nmap <F8> :w<CR>
 inoremap <F8> <ESC>:w<CR>a
 
 " Quit file
-nmap <F3> :q!<CR>
-inoremap <F3> <ESC>:q!<CR>
+" nmap <F3> :q!<CR>
+" inoremap <F3> <ESC>:q!<CR>
 
 " Stamping
 nnoremap S diw"0P
