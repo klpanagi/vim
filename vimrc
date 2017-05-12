@@ -57,7 +57,7 @@ Plug 'wellle/tmux-complete.vim'
 Plug 'zchee/deoplete-zsh'
 Plug 'Shougo/neco-vim'
 "" ------------------}
-Plug 'rakr/vim-one'
+Plug 'chriskempson/base16-vim'
 Plug 'Shougo/unite.vim'
 "" Vim script for text filtering and alignment 
 Plug 'godlygeek/tabular'
@@ -109,6 +109,9 @@ Plug 'plasticboy/vim-markdown'
 
 Plug 'itchyny/lightline.vim'
 call plug#end()
+
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python3'
 
 filetype plugin indent on
 syntax on

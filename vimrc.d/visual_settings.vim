@@ -10,21 +10,26 @@ if !exists('g:not_finish_vimplug')
   "colorscheme molokai
 endif
 
-"" Colorscheme configuration ----{
-"if (empty($TMUX))
-if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
 if (has("termguicolors"))
   set termguicolors
 endif
+
+"" Colorscheme configuration ----{
+"if (empty($TMUX))
+" if (has("nvim"))
+"   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" endif
 "endif
 
 "let g:onedark_termcolors=16
-let g:one_allow_italics = 1
-colorscheme one
-set background=dark
+" let g:one_allow_italics = 1
+" colorscheme one
+" set background=dark
 "" ------------------}
+
+colorscheme base16-default-dark
+" colorscheme base16-onedark
+" colorscheme base16-tomorrow-night
 
 set mousemodel=popup
 set guioptions=egmrti
