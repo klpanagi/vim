@@ -58,6 +58,7 @@ Plug 'zchee/deoplete-zsh'
 Plug 'Shougo/neco-vim'
 "" ------------------}
 Plug 'chriskempson/base16-vim'
+
 Plug 'Shougo/unite.vim'
 "" Vim script for text filtering and alignment 
 Plug 'godlygeek/tabular'
@@ -71,6 +72,8 @@ Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot' "A collection of language packs for Vim
+
+Plug 'PotatoesMaster/i3-vim-syntax'
 
 Plug 'vim-scripts/DoxygenToolkit.vim'
 
