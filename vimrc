@@ -44,6 +44,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
 Plug 'milkypostman/vim-togglelist'
+Plug 'itchyny/lightline.vim'
+Plug 'taohex/lightline-buffer'
 
 Plug 'Chiel92/vim-autoformat'
 
@@ -94,10 +96,13 @@ Plug 'mhinz/vim-startify'
 Plug 'rhysd/vim-grammarous'
 Plug 'kana/vim-operator-user'
 Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
+
 "" Python Plugins --{
 Plug 'hdima/python-syntax'
 Plug 'heavenshell/vim-pydocstring'
+Plug 'davidhalter/jedi-vim'
 "" --}
+
 "" JavaScript Plugins --{
 Plug 'pangloss/vim-javascript'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
@@ -110,7 +115,6 @@ Plug 'elzr/vim-json'
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 Plug 'plasticboy/vim-markdown'
 
-Plug 'itchyny/lightline.vim'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python2'

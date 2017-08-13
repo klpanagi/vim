@@ -29,13 +29,12 @@ if has('nvim')
 endif
 
 " Tab windows navigation
-noremap <S-Left> :tabprevious<CR>
-noremap <S-Right> :tabnext<CR>
+noremap <A-Left> :tabprevious<CR>
+noremap <A-Right> :tabnext<CR>
 noremap <C-W>n :tabnew<CR>
 noremap <C-W>q :tabclose<CR>
 
 " Switch between source files and header files quickly
-nnoremap <F4> <ESC>:AS<CR>
 nnoremap <F6> <ESC>:AS<CR>
 
 " Save file
