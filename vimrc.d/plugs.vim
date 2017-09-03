@@ -75,21 +75,11 @@ let g:tagbar_type_javascript = {
     \ 'ctagsbin' : '/usr/bin/jsctags'
 \ }
 
-let g:vim_markdown_toc_autofit = 1
-let g:vim_markdown_autowrite = 1
-let g:vim_markdown_new_list_item_indent = 4
-let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_json_frontmatter = 1
-
 set complete+=kspell
 
 let python_highlight_all = 1
 
 nmap <silent> <leader>d <Plug>(pydocstring)
-
-let g:markdown_composer_autostart=1
-let g:markdown_composer_browser="firefox"
-let g:markdown_composer_syntax_theme="atom-one-dark"
 
 " Navigate the completion menu from top to bottom
 let g:SuperTabDefaultCompletionType = "<c-n>"
