@@ -23,13 +23,14 @@ set cursorline          " Highlight current line
 set wildmenu            " visual autocomplete for command menu
 set showmatch           " highlight matching [{()}]
 
+set clipboard=unnamedplus  " Use system clipboard to copy and paste
 
 if has('gui_running')
   nnoremap <C-V> "+gP
   inoremap <C-V> <ESC><C-V>i
   vnoremap <C-C> "+y
-  set clipboard=unnamedplus
-  "set guioptions+=a
+  " set clipboard=unnamedplus
+  " set guioptions+=a
   set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 endif
 
@@ -64,6 +65,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+"""""""""""""""""""""""""""""
 
 set fileformats=unix
 set showcmd

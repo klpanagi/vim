@@ -1,7 +1,7 @@
-augroup python
-  autocmd!
-  autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@=" 
-augroup end
+" augroup python
+"   autocmd!
+"   autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
+" augroup end
 
 "" Autoreload vimrc -----{
 augroup reload_vimrc

@@ -14,8 +14,6 @@ let g:airline_powerline_fonts = 1
 
 set complete+=kspell
 
-let python_highlight_all = 1
-
 nmap <silent> <leader>d <Plug>(pydocstring)
 
 " Navigate the completion menu from top to bottom
