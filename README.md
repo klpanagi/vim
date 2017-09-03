@@ -6,10 +6,7 @@ List of Plugins:
 - [vim-instant-markdown](#vim-instant-markdown)
 - [neomake](#neomake)
 - [deoplete.nvim](#deoplete.vim)
--
--
--
--
+
 
 ### [vim-instant-markdown](https://github.com/suan/vim-instant-markdown)
 

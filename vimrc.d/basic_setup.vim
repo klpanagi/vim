@@ -30,6 +30,7 @@ if has('gui_running')
   vnoremap <C-C> "+y
   set clipboard=unnamedplus
   "set guioptions+=a
+  set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 endif
 
 set backspace=indent,eol,start  " Enable backspace deletion mode
@@ -47,12 +48,22 @@ set cindent               " Like smartindent, but stricter and more customisabl
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn="80,".join(range(120,999),",")    " Show 80 line vertical line
 
-"" Searching --{
+"""""""""""""""""""""""""""""
+"" SECTION: Folding
+"""""""""""""""""""""""""""""
+set foldmethod=syntax           " Fold according to syntax type
+set foldcolumn=1                " Show fold column next to numbers
+set foldlevelstart=20           " Start file with all folds open
+set foldminlines=4              " Fold only hunks with mre than 4 lines
+let g:SimpylFold_docstring_preview = 1
+
+"""""""""""""""""""""""""""""
+"" SECTION: Searching
+"""""""""""""""""""""""""""""
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-"" --}
 
 set fileformats=unix
 set showcmd
@@ -60,13 +71,6 @@ set shell=/bin/sh
 
 "" Map leader to ,
 let mapleader=','
-
-"" Autoreload vimrc -----{
-augroup reload_vimrc
-  autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END
-""  -----}
 
 "" Disable annoying beeping and flashing -----{
 set noerrorbells visualbell t_vb=

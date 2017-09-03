@@ -1,79 +1,16 @@
-"""""""""""""""""""""""""""""""""
-"" SECTION: Nerd Tree
-"""""""""""""""""""""""""""""""""
-let NERDTreeDirArrows=1         " Use + ~ chars for directories
-let NERDTreeMinimalUI=1         " Remove excess information bars
-let NERDTreeShowBookmarks=1     " Show Bookmarks
-
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
-   exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
-    exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-" NERDTress File highlighting --{
-call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-call NERDTreeHighlightFile('py', 'Magenta', 'none', '#ff00ff', '#151515')
-" --}
-
-" Ignore files in NERDTree
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-
-" Toggle NERDTree sidebar
-nmap <F2> :NERDTreeToggle %<CR>
-inoremap <F2> <ESC>:NERDTreeToggle %<CR>
-
-
 """"""""""""""""""""""""""""""""""""""
 "" SECTION: Vim-Better-Whitespace
 """""""""""""""""""""""""""""
-highlight ExtraWhitespace ctermbg=yellow
+highlight ExtraWhitespace ctermbg=red
 let g:better_whitespace_verbosity=1
 """"""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""
-"" SECTION: Livedown
-"""""""""""""""""""""""""""""
-" should markdown preview get shown automatically upon opening markdown buffer
-let g:livedown_autorun = 0
-" should the browser window pop-up upon previewing
-let g:livedown_open = 1
-let g:livedown_port = 1337
-let g:livedown_browser = "firefox"
-
-
-"""""""""""""""""""""""""""""
-"" SECTION: Folding
-"""""""""""""""""""""""""""""
-set foldmethod=syntax           " Fold according to syntax type
-set foldcolumn=1                " Show fold column next to numbers
-set foldlevelstart=20           " Start file with all folds open
-set foldminlines=4              " Fold only hunks with mre than 4 lines
-let g:SimpylFold_docstring_preview = 1
-
 
 """""""""""""""""""""""""""""
 "" SECTION: Others
 """""""""""""""""""""""""""""
 let g:tmuxcomplete#trigger = 'omnifunc'
 let g:plug_url_format = 'git@github.com:%s.git'
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
 let g:airline_powerline_fonts = 1
-let g:tagbar_type_javascript = {
-    \ 'ctagsbin' : '/usr/bin/jsctags'
-\ }
 
 set complete+=kspell
 
@@ -88,3 +25,6 @@ nmap <script> <silent> <leader>l :call ToggleLocationList()<CR>
 nmap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
 
 nnoremap <F4> :TagbarToggle<CR>
+let g:tagbar_type_javascript = {
+    \ 'ctagsbin' : '/usr/bin/jsctags'
+\ }
