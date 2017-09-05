@@ -43,11 +43,10 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
-Plug 'milkypostman/vim-togglelist'
 Plug 'itchyny/lightline.vim'
 Plug 'taohex/lightline-buffer'
 
-Plug 'Chiel92/vim-autoformat'
+Plug 'Chiel92/vim-autoformat'  " Code formatting
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
@@ -62,22 +61,21 @@ Plug 'Shougo/neco-vim'
 Plug 'chriskempson/base16-vim'
 
 Plug 'Shougo/unite.vim'
-"" Vim script for text filtering and alignment 
-Plug 'godlygeek/tabular'
+Plug 'godlygeek/tabular'                    " Filtering and Alignment
 ""  Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
 "" Code Snippets ---{
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 "" ---------------}
-Plug 'tpope/vim-commentary'
-Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-commentary'                 " Awesome Commenting
+Plug 'ntpeters/vim-better-whitespace'       " Display trailing whitespace
 Plug 'scrooloose/nerdtree'
-Plug 'sheerun/vim-polyglot' "A collection of language packs for Vim
+Plug 'sheerun/vim-polyglot'                 "A collection of language packs for Vim
 
 Plug 'PotatoesMaster/i3-vim-syntax'
 
-Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'milkypostman/vim-togglelist'
 
 "" Vim and Tmux together ------------{
 Plug 'christoomey/vim-tmux-navigator'
@@ -100,19 +98,15 @@ Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 "" Python Plugins --{
 Plug 'hdima/python-syntax'
 Plug 'heavenshell/vim-pydocstring'
-Plug 'davidhalter/jedi-vim'
 "" --}
 
 "" JavaScript Plugins --{
 Plug 'pangloss/vim-javascript'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-Plug 'digitaltoad/vim-pug'
 "" --}
-Plug 'mhinz/vim-rfc'
-Plug 'vim-scripts/rfc-syntax', { 'for': 'rfc' }
 Plug 'elzr/vim-json'
 
-Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+" Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 Plug 'plasticboy/vim-markdown'
 
 call plug#end()
