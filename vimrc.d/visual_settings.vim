@@ -31,6 +31,8 @@ colorscheme base16-default-dark
 " colorscheme base16-onedark
 " colorscheme base16-tomorrow-night
 
+let base16colorspace=256
+
 set mousemodel=popup
 set guioptions=egmrti
 set gfn=Monospace\ 10
@@ -70,4 +72,6 @@ if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
 endif
 
-highlight Pmenu ctermfg=2 ctermbg=3 guifg=#ffffff guibg=#0000ff
+"" highlight Pmenu ctermfg=2 ctermbg=3 guifg=#ffffff guibg=#0000ff
+
+let g:airline_theme='simple'

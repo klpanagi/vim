@@ -21,12 +21,12 @@ call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-call NERDTreeHighlightFile('py', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('py', 'green', 'none', '#ff00ff', '#151515')
 " --}
 
 " Ignore files in NERDTree
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " Toggle NERDTree sidebar
-nmap <F2> :NERDTreeToggle %<CR>
-inoremap <F2> <ESC>:NERDTreeToggle %<CR>
+nmap <F3> :NERDTreeToggle %<CR>
+inoremap <F3> <ESC>:NERDTreeToggle %<CR>

@@ -70,6 +70,8 @@ Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
 
+Plug 'tpope/vim-surround'
+
 Plug 'PotatoesMaster/i3-vim-syntax'
 
 "" Vim and Tmux together ------------{
@@ -77,6 +79,9 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 "" ----------------------------------}
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 "" Git related -----------------{
 " Plug 'airblade/vim-gitgutter'
