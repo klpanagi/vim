@@ -3,10 +3,6 @@ let maplocalleader="`"
 
 map <Esc>[B <Down>]
 
-" move to beginning/end of line
-nnoremap B ^
-nnoremap E $
-
 " Highlight last inserted text
 nnoremap gV `[v`]
 
@@ -34,86 +30,12 @@ noremap <A-Right> :tabnext<CR>
 noremap <C-W>n :tabnew<CR>
 noremap <C-W>q :tabclose<CR>
 
-" Switch between source files and header files quickly
-nnoremap <F6> <ESC>:AS<CR>
-
-" Save file
-nmap <F8> :w<CR>
-inoremap <F8> <ESC>:w<CR>a
-
 " Quit file
 " nmap <F3> :q!<CR>
 " inoremap <F3> <ESC>:q!<CR>
 
 " Stamping
 nnoremap S diw"0P
-
-
-" Delete the contents of brackets
-imap dd{ <ESC>di{i
-imap dd[ <ESC>di[i
-imap dd( <ESC>di(
-imap dd' <ESC>di'i
-imap dd" <ESC>di"i
-imap dd< <ESC>di<i
-nmap dd{ di{
-nmap dd[ di[
-nmap dd( di(
-nmap dd' di'
-nmap dd" di"
-nmap dd< di<
-imap dd} <ESC>di}i
-imap dd] <ESC>di]i
-imap dd) <ESC>di)i
-imap dd> <ESC>di>i
-nmap dd} di}
-nmap dd] di]
-nmap dd) di)
-nmap dd> di>
-
-" Copy the contents of brackets
-imap yy{ <ESC>yi{i
-imap yy[ <ESC>yi[i
-imap yy( <ESC>yi(i
-imap yy' <ESC>yi'i
-imap yy" <ESC>yi"i
-imap yy< <ESC>yi<i
-nmap yy{ yi{
-nmap yy[ yi[
-nmap yy( yi(
-nmap yy' yi'
-nmap yy" yi"
-nmap yy< yi<
-imap yy} <ESC>yi}i
-imap yy] <ESC>yi]i
-imap yy) <ESC>yi)i
-imap yy> <ESC>yi>i
-nmap yy} yi}
-nmap yy] yi]
-nmap yy) yi)
-nmap yy> yi>
-
-" Select the contents of brackets
-imap vv{ <ESC>vi{i
-imap vv[ <ESC>vi[i
-imap vv( <ESC>vi(i
-imap vv' <ESC>vi'i
-imap vv" <ESC>vi"i
-imap vv< <ESC>vi<i
-nmap vv{ vi{
-nmap vv[ vi[
-nmap vv( vi(
-nmap vv' vi'
-nmap vv" vi"
-nmap vv< vi<
-imap vv} <ESC>vi}i
-imap vv] <ESC>vi]i
-imap vv) <ESC>vi)i
-imap vv> <ESC>vi>i
-nmap vv} yi}
-nmap vv] vi]
-nmap vv) vi)
-nmap vv> vi>
 
 
 "" Indentation --{
@@ -131,5 +53,3 @@ inoremap <leader>c <C-o>:call NERDComment(0,"toggle")<C-m>
 
 " Space character in normal mode
 nnoremap <space> i<space><ESC><right>
-
-nnoremap <leader>sws :StripWhitespace<CR>

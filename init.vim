@@ -42,38 +42,33 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
-Plug 'milkypostman/vim-togglelist'
-Plug 'itchyny/lightline.vim'
-Plug 'taohex/lightline-buffer'
+" Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
+" Plug 'milkypostman/vim-togglelist'
 
-Plug 'Chiel92/vim-autoformat'
+" Plug 'Chiel92/vim-autoformat'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
 "" Deoplete sources -----{
-Plug 'zchee/deoplete-jedi', { 'do': 'sudo pip install jedi' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
-Plug 'zchee/deoplete-clang'
-Plug 'wellle/tmux-complete.vim'
-Plug 'zchee/deoplete-zsh'
-Plug 'Shougo/neco-vim'
+" Plug 'zchee/deoplete-jedi', { 'do': 'sudo pip install jedi' }
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
+" Plug 'zchee/deoplete-clang'
+" Plug 'wellle/tmux-complete.vim'
+" Plug 'zchee/deoplete-zsh'
+" Plug 'Shougo/neco-vim'
 "" ------------------}
 Plug 'chriskempson/base16-vim'
 
-Plug 'Shougo/unite.vim'
-"" Vim script for text filtering and alignment 
-Plug 'godlygeek/tabular'
+" Plug 'godlygeek/tabular'
 ""  Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
 "" Code Snippets ---{
-Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips'
 "" ---------------}
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
-Plug 'sheerun/vim-polyglot' "A collection of language packs for Vim
 
 Plug 'PotatoesMaster/i3-vim-syntax'
 
@@ -84,29 +79,23 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 "" ----------------------------------}
 
 "" Git related -----------------{
-Plug 'airblade/vim-gitgutter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tpope/vim-fugitive'
+" Plug 'airblade/vim-gitgutter'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'tpope/vim-fugitive'
 "" -----------------------------}
 
-Plug 'Raimondi/delimitMate'
-Plug 'mhinz/vim-startify'
-Plug 'rhysd/vim-grammarous'
-Plug 'kana/vim-operator-user'
-Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
+" Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 
 "" Python Plugins --{
-Plug 'hdima/python-syntax'
-Plug 'heavenshell/vim-pydocstring'
+" Plug 'hdima/python-syntax'
+" Plug 'heavenshell/vim-pydocstring'
 "" --}
 
 "" JavaScript Plugins --{
-Plug 'pangloss/vim-javascript'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-Plug 'digitaltoad/vim-pug'
+" Plug 'pangloss/vim-javascript'
+" Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+" Plug 'digitaltoad/vim-pug'
 "" --}
-Plug 'elzr/vim-json'
-Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 

@@ -22,7 +22,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 nmap <script> <silent> <leader>l :call ToggleLocationList()<CR>
 nmap <script> <silent> <leader>q :call ToggleQuickfixList()<CR>
 
-nnoremap <F4> :TagbarToggle<CR>
+nnoremap <F2> :TagbarToggle<CR>
 let g:tagbar_type_javascript = {
     \ 'ctagsbin' : '/usr/bin/jsctags'
 \ }
