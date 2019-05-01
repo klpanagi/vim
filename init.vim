@@ -64,7 +64,6 @@ endif
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 
-Plug 'ervandew/supertab'
 "" Deoplete sources -----{
 " Plug 'zchee/deoplete-jedi', { 'do': 'sudo pip install jedi' }
 " Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
