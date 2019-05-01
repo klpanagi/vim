@@ -47,7 +47,16 @@ call plug#begin('~/.vim/plugged')
 
 " Plug 'Chiel92/vim-autoformat'
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/unite.vim'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 Plug 'ervandew/supertab'
 "" Deoplete sources -----{
 " Plug 'zchee/deoplete-jedi', { 'do': 'sudo pip install jedi' }
@@ -68,7 +77,14 @@ Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
 "" ---------------}
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'scrooloose/nerdtree'
+
+if has('nvim')
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/defx.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 Plug 'tpope/vim-surround'
 
