@@ -9,6 +9,8 @@ nnoremap gV `[v`]
 " Escape
 inoremap jk <esc>
 
+nnoremap qq :bd<CR>
+
 " Yank to the system clipboard
 vnoremap <C-c> "*y
 
