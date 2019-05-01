@@ -27,6 +27,8 @@ function! s:defx_my_settings() abort
   \ defx#do_action('open', 'pedit')
   nnoremap <silent><buffer><expr> o
   \ defx#do_action('open_or_close_tree')
+  nnoremap <silent><buffer><expr> <Right>
+  \ defx#do_action('open_or_close_tree')
   nnoremap <silent><buffer><expr> K
   \ defx#do_action('new_directory')
   nnoremap <silent><buffer><expr> N
