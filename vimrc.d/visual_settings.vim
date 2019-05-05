@@ -24,12 +24,13 @@ endif
 "let g:onedark_termcolors=16
 " let g:one_allow_italics = 1
 " colorscheme one
-" set background=dark
 "" ------------------}
 
-colorscheme base16-default-dark
+" colorscheme base16-default-dark
 " colorscheme base16-onedark
 " colorscheme base16-tomorrow-night
+"
+colorscheme gruvbox
 
 let base16colorspace=256
 

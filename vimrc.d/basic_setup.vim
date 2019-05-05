@@ -31,7 +31,7 @@ if has('gui_running')
   vnoremap <C-C> "+y
   " set clipboard=unnamedplus
   " set guioptions+=a
-  set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+  set guifont=FantasqueSansMono\ Nerd\ Font\ Mono\ 11
 endif
 
 set backspace=indent,eol,start  " Enable backspace deletion mode

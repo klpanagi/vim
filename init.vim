@@ -72,7 +72,9 @@ Plug 'Shougo/neosnippet-snippets'
 " Plug 'zchee/deoplete-zsh'
 " Plug 'Shougo/neco-vim'
 "" ------------------}
-Plug 'chriskempson/base16-vim'
+
+Plug 'morhetz/gruvbox'
+" Plug 'chriskempson/base16-vim'
 
 " Plug 'godlygeek/tabular'
 ""  Vim plugin that displays tags in a window, ordered by scope
@@ -97,11 +99,16 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'w0rp/ale'
+
 "" Git related -----------------{
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'tpope/vim-fugitive'
 "" -----------------------------}
+
+" insert mode auto-completion for quotes, parens, brackets, etc
+Plug 'Raimondi/delimitMate'
 
 " Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 
@@ -128,3 +135,5 @@ syntax on
 for fpath in split(globpath('~/.vim/vimrc.d/', '*.vim'), '\n')
   exe 'source' fpath
 endfor
+
+exec 'source' '~/.vim/vimrc.d/autocmd.vim'
