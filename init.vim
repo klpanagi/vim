@@ -42,10 +42,7 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 
-" Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
 " Plug 'milkypostman/vim-togglelist'
-
-" Plug 'Chiel92/vim-autoformat'
 
 Plug 'Shougo/unite.vim'
 
@@ -61,9 +58,6 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
-
 "" Deoplete sources -----{
 " Plug 'zchee/deoplete-jedi', { 'do': 'sudo pip install jedi' }
 " Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
@@ -77,12 +71,17 @@ Plug 'morhetz/gruvbox'
 " Plug 'chriskempson/base16-vim'
 
 " Plug 'godlygeek/tabular'
+"
 ""  Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
+
 "" Code Snippets ---{
 " Plug 'honza/vim-snippets'
 " Plug 'SirVer/ultisnips'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 "" ---------------}
+
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 
@@ -99,11 +98,13 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Linting Engine
 Plug 'w0rp/ale'
+" Plug 'Chiel92/vim-autoformat'
+" Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
 
 "" Git related -----------------{
 Plug 'airblade/vim-gitgutter'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'tpope/vim-fugitive'
 "" -----------------------------}
 
@@ -111,17 +112,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Raimondi/delimitMate'
 
 " Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
-
-"" Python Plugins --{
-" Plug 'hdima/python-syntax'
-" Plug 'heavenshell/vim-pydocstring'
-"" --}
-
-"" JavaScript Plugins --{
-" Plug 'pangloss/vim-javascript'
-" Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-" Plug 'digitaltoad/vim-pug'
-"" --}
 
 call plug#end()
 
@@ -135,5 +125,4 @@ syntax on
 for fpath in split(globpath('~/.vim/vimrc.d/', '*.vim'), '\n')
   exe 'source' fpath
 endfor
-
 exec 'source' '~/.vim/vimrc.d/autocmd.vim'

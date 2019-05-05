@@ -22,8 +22,11 @@ let g:ale_set_quickfix = 1
 
 let g:ale_lint_on_text_changed = 'never'
 
+nnoremap <Leader> :ALEToggle<CR>
+
 nmap <silent> <space>k <Plug>(ale_previous_wrap)
 nmap <silent> <space>j <Plug>(ale_next_wrap)
+
 
 highlight ALEWarning ctermbg=DarkMagenta
 
