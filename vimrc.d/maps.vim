@@ -49,7 +49,7 @@ vnoremap <C-d> <gV
 " --}
 
 " Space character in normal mode
-nnoremap <space> i<space><ESC><right>
+" nnoremap <space> i<space><ESC><right>
 
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
