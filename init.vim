@@ -115,8 +115,10 @@ Plug 'Raimondi/delimitMate'
 
 call plug#end()
 
-let g:python_host_prog = '/usr/bin/python2'
-let g:python3_host_prog = '/usr/bin/python3'
+if has('nvim')
+  let g:python_host_prog = '/usr/bin/python2'
+  let g:python3_host_prog = '/usr/bin/python3'
+endif
 
 filetype plugin indent on
 syntax on
