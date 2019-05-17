@@ -59,7 +59,7 @@ else
 endif
 
 "" Deoplete sources -----{
-" Plug 'zchee/deoplete-jedi', { 'do': 'sudo pip install jedi' }
+Plug 'zchee/deoplete-jedi', { 'do': 'pip install jedi --user' }
 " Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
 " Plug 'zchee/deoplete-clang'
 " Plug 'wellle/tmux-complete.vim'
@@ -84,6 +84,10 @@ Plug 'Shougo/neosnippet-snippets'
 
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
+
+Plug 'zhimsel/vim-stay'
+Plug 'Konfekt/FastFold'
+Plug 'tmhedberg/SimpylFold'
 
 Plug 'tpope/vim-surround'
 
