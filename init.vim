@@ -119,6 +119,9 @@ Plug 'Raimondi/delimitMate'
 
 " Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
 
+Plug 'jlanzarotta/bufexplorer'
+Plug 'ap/vim-buftabline'
+
 call plug#end()
 
 if has('nvim')

@@ -31,8 +31,8 @@ if has('nvim')
 endif
 
 " Tab windows navigation
-noremap <A-Left> :tabprevious<CR>
-noremap <A-Right> :tabnext<CR>
+" noremap <A-Left> :tabprevious<CR>
+" noremap <A-Right> :tabnext<CR>
 noremap <C-W>n :tabnew<CR>
 noremap <C-W>q :tabclose<CR>
 
