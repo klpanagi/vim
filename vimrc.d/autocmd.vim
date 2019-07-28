@@ -5,6 +5,12 @@ augroup python
         \ | highlight def link pythonSelf Special
 augroup end
 
+augroup AutoSaveFolds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
+
 autocmd VimEnter *
   \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall | q
