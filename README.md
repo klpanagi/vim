@@ -6,6 +6,12 @@ I :heart: Vim! :metal:
 - NeoVIM
 - Python autocompletion (deoplete-jedi): `pip install jedi --user`
 
+## Install deps on Arch Linux
+
+```bash
+pacman -Syy neovim python2-pip npm
+pip2 install pynvim
+```
 
 # List of plugins
 
