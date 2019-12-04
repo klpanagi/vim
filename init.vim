@@ -88,8 +88,9 @@ Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'zhimsel/vim-stay'
+Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
-Plug 'tmhedberg/SimpylFold'
+" Plug 'tmhedberg/SimpylFold'
 
 Plug 'tpope/vim-surround'
 
@@ -121,6 +122,8 @@ Plug 'Raimondi/delimitMate'
 
 Plug 'jlanzarotta/bufexplorer'
 Plug 'ap/vim-buftabline'
+
+Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
 

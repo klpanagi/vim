@@ -55,7 +55,7 @@ let &colorcolumn="80,".join(range(120,999),",")    " Show 80 line vertical line
 set foldmethod=syntax           " Fold according to syntax type
 set foldcolumn=1                " Show fold column next to numbers
 set foldlevelstart=20           " Start file with all folds open
-set foldminlines=4              " Fold only hunks with mre than 4 lines
+set foldminlines=0              " Fold only hunks with mre than 4 lines
 
 """""""""""""""""""""""""""""
 "" SECTION: Searching
