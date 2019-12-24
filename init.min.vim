@@ -88,8 +88,6 @@ Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'tpope/vim-surround'
 
-Plug 'PotatoesMaster/i3-vim-syntax'
-
 "" Vim and Tmux together ------------{
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux'
