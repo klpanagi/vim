@@ -78,8 +78,6 @@ Plug 'morhetz/gruvbox'
 Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
 
 "" Code Snippets ---{
-" Plug 'honza/vim-snippets'
-" Plug 'SirVer/ultisnips'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 "" ---------------}
@@ -118,12 +116,12 @@ Plug 'airblade/vim-gitgutter'
 " insert mode auto-completion for quotes, parens, brackets, etc
 Plug 'Raimondi/delimitMate'
 
-" Plug 'Shougo/vimproc.vim', { 'do' : 'make' }
-
 Plug 'jlanzarotta/bufexplorer'
 Plug 'ap/vim-buftabline'
 
 Plug 'Vimjas/vim-python-pep8-indent'
+
+Plug 'igordejanovic/textx.vim'
 
 call plug#end()
 
@@ -139,4 +137,4 @@ syntax on
 for fpath in split(globpath('~/.vim/vimrc.d/', '*.vim'), '\n')
   exe 'source' fpath
 endfor
-exec 'source' '~/.vim/vimrc.d/autocmd.vim'
+exe 'source' '~/.vim/vimrc.d/autocmd.vim'
