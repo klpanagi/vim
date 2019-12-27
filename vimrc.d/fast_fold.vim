@@ -18,7 +18,3 @@ let g:perl_fold_blocks = 1
 let g:r_syntax_folding = 1
 let g:rust_fold = 1
 let g:php_folding = 1
-let g:python_folding = 1
-let g:python_fold = 1
-
-filetype plugin indent on

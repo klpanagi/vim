@@ -3,7 +3,7 @@ augroup python
   autocmd FileType python
         \   syn keyword pythonSelf self
         \ | highlight def link pythonSelf Special
-        " \ | set foldmethod=indent
+        \ | set foldmethod=indent
         " \ | set tabstop=4
         " \ | set tabstop=4
         " \ | set softtabstop=4
