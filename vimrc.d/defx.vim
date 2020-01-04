@@ -23,7 +23,7 @@ function! s:setup_defx() abort
 
   call defx#custom#column('filename', {
         \ 'min_width': 0,
-        \ 'max_width': 80,
+        \ 'max_width': 100,
         \ })
 
   call s:defx_open({ 'dir': expand('<afile>') })

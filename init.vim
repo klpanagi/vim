@@ -120,6 +120,9 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'ap/vim-buftabline'
 
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'heavenshell/vim-pydocstring'
+
+Plug 'antoyo/vim-licenses'
 
 Plug 'igordejanovic/textx.vim'
 
