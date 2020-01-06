@@ -56,8 +56,6 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'Shougo/defx.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
 "" Deoplete sources -----{
@@ -104,9 +102,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Linting Engine
-Plug 'w0rp/ale'
-" Plug 'Chiel92/vim-autoformat'
-" Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
+Plug 'dense-analysis/ale'
 
 "" Git related -----------------{
 Plug 'airblade/vim-gitgutter'
