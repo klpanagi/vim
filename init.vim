@@ -53,9 +53,9 @@ if has('nvim')
   Plug 'kristijanhusak/defx-icons'
 else
   Plug 'Shougo/deoplete.nvim'
+  Plug 'Shougo/defx.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
-  Plug 'Shougo/defx.nvim'
 endif
 
 "" Deoplete sources -----{
@@ -70,8 +70,6 @@ Plug 'zchee/deoplete-jedi', { 'do': 'pip install jedi --user' }
 Plug 'morhetz/gruvbox'
 " Plug 'chriskempson/base16-vim'
 
-" Plug 'godlygeek/tabular'
-"
 ""  Vim plugin that displays tags in a window, ordered by scope
 Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
 
