@@ -113,7 +113,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Raimondi/delimitMate'
 
 Plug 'jlanzarotta/bufexplorer'
-Plug 'ap/vim-buftabline'
+" Plug 'ap/vim-buftabline'
 
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'heavenshell/vim-pydocstring'
