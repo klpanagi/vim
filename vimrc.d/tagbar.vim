@@ -1,4 +1,4 @@
-let g:tagbar_left = 1
+let g:tagbar_left = 0
 
 autocmd FileType c,cpp,py nested :TagbarOpen
 

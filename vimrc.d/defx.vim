@@ -13,7 +13,7 @@ function! s:setup_defx() abort
   call defx#custom#option('_', {
         \ 'columns': s:default_columns,
         \ 'split': 'vertical',
-        \ 'direction': 'botright',
+        \ 'direction': 'topleft',
         \ 'show_ignored_files': 0,
         \ 'buffer_name': '',
         \ 'winwidth': 30,
