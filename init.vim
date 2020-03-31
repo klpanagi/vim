@@ -120,6 +120,9 @@ Plug 'antoyo/vim-licenses'
 
 Plug 'igordejanovic/textx.vim'
 
+Plug 'chr4/nginx.vim'
+
+
 call plug#end()
 
 if has('nvim')
