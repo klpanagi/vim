@@ -67,11 +67,15 @@ Plug 'zchee/deoplete-jedi', { 'do': 'pip install jedi --user' }
 " Plug 'Shougo/neco-vim'
 "" ------------------}
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 Plug 'morhetz/gruvbox'
 " Plug 'chriskempson/base16-vim'
 
 ""  Vim plugin that displays tags in a window, ordered by scope
-Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
+" Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
+Plug 'liuchengxu/vista.vim'
 
 "" Code Snippets ---{
 Plug 'Shougo/neosnippet.vim'
@@ -114,7 +118,8 @@ Plug 'jlanzarotta/bufexplorer'
 " Plug 'ap/vim-buftabline'
 
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'heavenshell/vim-pydocstring'
+Plug 'jeetsukumaran/vim-pythonsense'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 Plug 'antoyo/vim-licenses'
 
