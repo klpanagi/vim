@@ -119,7 +119,6 @@ Plug 'jlanzarotta/bufexplorer'
 
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jeetsukumaran/vim-pythonsense'
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 Plug 'antoyo/vim-licenses'
 
@@ -127,6 +126,7 @@ Plug 'igordejanovic/textx.vim'
 
 Plug 'chr4/nginx.vim'
 
+" Plug 'tpope/vim-vinegar'
 
 call plug#end()
 
