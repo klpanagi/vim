@@ -1,4 +1,4 @@
-let g:ale_linters = { 'python': ['pyls'] }
+let g:ale_linters = { 'python': ['flake8', 'pylint'] }
 let g:ale_fixers = { 'python': ['yapf'] }
 " Only run linters named in ale_linters settings.
 let g:ale_linters_explicit = 1
@@ -27,6 +27,9 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_fix_on_save = 0
 
 let g:ale_set_highlights = 1
+
+" Disable warnings about trailing whitespace for Python files.
+let b:ale_warn_about_trailing_whitespace = 0
 
 " nnoremap <Leader> :ALEToggle<CR>
 
