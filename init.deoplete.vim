@@ -42,45 +42,91 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'majutsushi/tagbar'
+" Plug 'milkypostman/vim-togglelist'
+
+Plug 'Shougo/unite.vim'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'kristijanhusak/defx-git'
+  Plug 'kristijanhusak/defx-icons'
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'Shougo/defx.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+"" Deoplete sources -----{
+Plug 'zchee/deoplete-jedi', { 'do': 'pip install jedi --user' }
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
+" Plug 'zchee/deoplete-clang'
+" Plug 'wellle/tmux-complete.vim'
+" Plug 'zchee/deoplete-zsh'
+" Plug 'Shougo/neco-vim'
+"" ------------------}
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
 Plug 'morhetz/gruvbox'
+" Plug 'chriskempson/base16-vim'
+
+""  Vim plugin that displays tags in a window, ordered by scope
+" Plug 'majutsushi/tagbar', { 'do': function('BuildTagbar') }
+" Plug 'liuchengxu/vista.vim'
+
+"" Code Snippets ---{
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+"" ---------------}
+
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
-""" ------------ FOLDING Plugins -------->
+
 Plug 'zhimsel/vim-stay'
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
-Plug 'tmhedberg/SimpylFold'
-"" <--------------------------------------
+" Plug 'tmhedberg/SimpylFold'
+
 Plug 'tpope/vim-surround'
-"" Vim and Tmux together ------------------>
+
+Plug 'PotatoesMaster/i3-vim-syntax'
+
+"" Vim and Tmux together ------------{
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
-" <-----------------------------------------
-" Status Bar ------------------------------>
+"" ----------------------------------}
+
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" < ----------------------------------------
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"" Git related ---------------------------->
+
+" Linting Engine
+Plug 'dense-analysis/ale'
+
+"" Git related -----------------{
 Plug 'airblade/vim-gitgutter'
-"  <----------------------------------------
+" Plug 'tpope/vim-fugitive'
+"" -----------------------------}
+
 " insert mode auto-completion for quotes, parens, brackets, etc
 Plug 'Raimondi/delimitMate'
+
 Plug 'jlanzarotta/bufexplorer'
-" Python specific ------------------------->
+" Plug 'ap/vim-buftabline'
+
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jeetsukumaran/vim-pythonsense'
+
 Plug 'antoyo/vim-licenses'
-" <-----------------------------------------
-" Syntax Highlighting --------------------->
-Plug 'PotatoesMaster/i3-vim-syntax'
+
 Plug 'igordejanovic/textx.vim'
+
 Plug 'chr4/nginx.vim'
-" <-----------------------------------------
+
+" Plug 'tpope/vim-vinegar'
 
 call plug#end()
 

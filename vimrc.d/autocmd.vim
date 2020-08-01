@@ -3,11 +3,15 @@ augroup python
   autocmd FileType python
         \   syn keyword pythonSelf self
         \ | highlight def link pythonSelf Special
-        " \ | set tabstop=4
-        " \ | set tabstop=4
-        " \ | set softtabstop=4
-        " \ | set shiftwidth=4
+        \ | set autoindent
+        \ | set tabstop=4
+        \ | set softtabstop=4
+        \ | set shiftwidth=4
 augroup end
+
+au BufNewFile,BufRead *.py set foldmethod=indent
+
+autocmd FileType json syntax match Comment +\/\/.\+$+
 
 augroup AutoSaveFolds
   autocmd!
@@ -21,5 +25,3 @@ autocmd VimEnter *
   \| endif
 
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
-
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
