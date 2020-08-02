@@ -9,18 +9,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 "" -----}
 
-"" Plug Hooks -----{
-function! BuildYCM(info)
-  " info is a dictionary with 3 fields
-  " - name:   name of the plugin
-  " - status: 'installed', 'updated', or 'unchanged'
-  " - force:  set on PlugInstall! or PlugUpdate!
-  if a:info.status == 'installed' || a:info.force
-    !./install.py --clang-completer --tern-completer
-  endif
-endfunction
-
-
 function! BuildFzF(info)
   if a:info.status == 'installed' || a:info.force
     !./install --all
@@ -32,7 +20,6 @@ function! BuildTagbar(info)
   !sudo npm install -g git+https://github.com/ramitos/jsctags.git
 endfunction
 "" -----}
-
 function! BuildComposer(info)
   if a:info.status != 'unchanged' || a:info.force
     !cargo build --release
@@ -54,7 +41,7 @@ Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
 Plug 'tmhedberg/SimpylFold'
 "" <--------------------------------------
-Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-surround'
 "" Vim and Tmux together ------------------>
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux'
@@ -65,6 +52,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " < ----------------------------------------
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-pairs', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-yank', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-smartf', {'do': 'yarn install --frozen-lockfile'}
+Plug 'weirongxu/coc-explorer', {'do': 'yarn install --frozen-lockfile'}
 "" Git related ---------------------------->
 Plug 'airblade/vim-gitgutter'
 "  <----------------------------------------
