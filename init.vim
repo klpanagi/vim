@@ -69,13 +69,14 @@ Plug 'jlanzarotta/bufexplorer'
 " Python specific ------------------------->
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jeetsukumaran/vim-pythonsense'
-Plug 'antoyo/vim-licenses'
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 " <-----------------------------------------
 " Syntax Highlighting --------------------->
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'igordejanovic/textx.vim'
 Plug 'chr4/nginx.vim'
 " <-----------------------------------------
+Plug 'antoyo/vim-licenses'
 
 call plug#end()
 
