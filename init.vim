@@ -35,6 +35,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
+" Plug 'pacha/vem-tabline'
 """ ------------ FOLDING Plugins -------->
 Plug 'zhimsel/vim-stay'
 Plug 'kalekundert/vim-coiled-snake'
@@ -65,7 +66,6 @@ Plug 'airblade/vim-gitgutter'
 "  <----------------------------------------
 " insert mode auto-completion for quotes, parens, brackets, etc
 Plug 'Raimondi/delimitMate'
-Plug 'jlanzarotta/bufexplorer'
 " Python specific ------------------------->
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jeetsukumaran/vim-pythonsense'
