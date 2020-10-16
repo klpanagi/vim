@@ -3,7 +3,6 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -17,12 +16,14 @@ inoremap <silent><expr> <Tab>
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
 
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 inoremap <expr> <c-space> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() :
                                            \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -32,3 +33,5 @@ function! SetupCommandAbbrs(from, to)
         \ .' ((getcmdtype() ==# ":" && getcmdline() ==# "'.a:from.'")'
         \ .'? ("'.a:to.'") : ("'.a:from.'"))'
 endfunction
+
+set statusline^=%{coc#status()}
