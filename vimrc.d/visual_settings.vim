@@ -14,22 +14,6 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-"" Colorscheme configuration ----{
-"if (empty($TMUX))
-" if (has("nvim"))
-"   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" endif
-"endif
-
-"let g:onedark_termcolors=16
-" let g:one_allow_italics = 1
-" colorscheme one
-"" ------------------}
-
-" colorscheme base16-default-dark
-" colorscheme base16-onedark
-" colorscheme base16-tomorrow-night
-"
 colorscheme gruvbox
 
 let base16colorspace=256

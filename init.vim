@@ -59,7 +59,6 @@ Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-pairs', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-yank', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-smartf', {'do': 'yarn install --frozen-lockfile'}
 Plug 'weirongxu/coc-explorer', {'do': 'yarn install --frozen-lockfile'}
 "" Git related ---------------------------->
 Plug 'airblade/vim-gitgutter'
@@ -70,6 +69,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jeetsukumaran/vim-pythonsense'
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+Plug 'vim-python/python-syntax'
 " <-----------------------------------------
 " Syntax Highlighting --------------------->
 Plug 'PotatoesMaster/i3-vim-syntax'
