@@ -3,18 +3,16 @@ set ruler
 set number
 
 let no_buffers_menu=1
-if !exists('g:not_finish_vimplug')
-  "set background=dark
-  "let g:rehash256=1
-  "let g:molokai_original=0
-  "colorscheme molokai
-endif
 
 if (has("termguicolors"))
   set termguicolors
 endif
 
-colorscheme gruvbox
+" colorscheme gruvbox
+set background=light
+set termguicolors " if you want to run vim in a terminal
+let python_highlight_all=1
+colorscheme breezy
 
 let base16colorspace=256
 

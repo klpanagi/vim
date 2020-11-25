@@ -32,7 +32,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'fneu/breezy'
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 " Plug 'pacha/vem-tabline'
