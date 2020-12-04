@@ -18,3 +18,5 @@ augroup AutoSaveFolds
 augroup END
 
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)

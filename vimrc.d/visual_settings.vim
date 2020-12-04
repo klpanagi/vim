@@ -9,12 +9,8 @@ if (has("termguicolors"))
 endif
 
 " colorscheme gruvbox
-set background=light
-set termguicolors " if you want to run vim in a terminal
-let python_highlight_all=1
-colorscheme breezy
-
-let base16colorspace=256
+let g:srcery_italic = 1
+colorscheme srcery
 
 set mousemodel=popup
 set guioptions=egmrti
@@ -54,5 +50,3 @@ set titlestring=%F
 if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
 endif
-
-"" highlight Pmenu ctermfg=2 ctermbg=3 guifg=#ffffff guibg=#0000ff
