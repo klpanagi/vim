@@ -29,12 +29,19 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 
+if has('nvim')
+  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/denite.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 Plug 'majutsushi/tagbar'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 " Colorschemes --------------------------------------------->
-Plug 'morhetz/gruvbox'
-Plug 'fneu/breezy'
+" Plug 'morhetz/gruvbox'
 Plug 'srcery-colors/srcery-vim'
 " ----------------------------------------------------------
 Plug 'tpope/vim-commentary'
@@ -67,8 +74,6 @@ Plug 'weirongxu/coc-explorer', {'do': 'yarn install --frozen-lockfile'}
 "" Git related ---------------------------->
 Plug 'airblade/vim-gitgutter'
 "  <----------------------------------------
-" insert mode auto-completion for quotes, parens, brackets, etc
-Plug 'Raimondi/delimitMate'
 " Python specific ------------------------->
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jeetsukumaran/vim-pythonsense'
