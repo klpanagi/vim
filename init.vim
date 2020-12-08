@@ -40,10 +40,14 @@ endif
 Plug 'majutsushi/tagbar'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
+"
 " Colorschemes --------------------------------------------->
 " Plug 'morhetz/gruvbox'
 Plug 'srcery-colors/srcery-vim'
 " ----------------------------------------------------------
+
+Plug 'Rykka/InstantRst'
+
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 " Plug 'pacha/vem-tabline'
