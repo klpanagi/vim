@@ -18,20 +18,20 @@ let g:neomake_list_height = 8
 
 let g:neomake_open_list = 0
 
-augroup my_neomake_signs
-  au!
-  autocmd ColorScheme *
-        \ hi NeomakeErrorSign ctermfg=white |
-        \ hi NeomakeWarningSign ctermfg=yellow
-augroup END
+" augroup my_neomake_signs
+"   au!
+"   autocmd ColorScheme *
+"         \ hi NeomakeErrorSign ctermfg=white |
+"         \ hi NeomakeWarningSign ctermfg=yellow
+" augroup END
 
-augroup my_neomake_highlights
-  au!
-  autocmd ColorScheme *
-        \ hi link NeomakeError SpellBad |
-        \ hi link NeomakeWarning SpellCap
-augroup END
+" augroup my_neomake_highlights
+"   au!
+"   autocmd ColorScheme *
+"         \ hi link NeomakeError SpellBad |
+"         \ hi link NeomakeWarning SpellCap
+" augroup END
 
 " set makeprg=shellcheck\ -fgcc\ %
 " autocmd! BufWritePost * Neomake!
-autocmd! BufWritePost * Neomake
+" autocmd! BufWritePost * Neomake
