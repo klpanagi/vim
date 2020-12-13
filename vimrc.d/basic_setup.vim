@@ -1,3 +1,55 @@
+syntax on
+set ruler
+set number
+
+let no_buffers_menu=1
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+" colorscheme gruvbox
+let g:srcery_italic = 1
+colorscheme srcery
+
+set mousemodel=popup
+set guioptions=egmrti
+set gfn=Monospace\ 10
+
+if has("gui_running")
+  let g:CSApprox_loaded = 1
+
+  if $TERM == 'xterm'
+    set term=xterm-256color
+  endif
+
+  " IndentLine
+  let g:indentLine_enabled = 1
+  let g:indentLine_concealcursor = 0
+  let g:indentLine_char = '┆'
+  let g:indentLine_faster = 1
+else
+  set t_Co=256
+endif
+
+"" Disable the blinking cursor.
+set gcr=a:blinkon0
+set scrolloff=3
+
+"" Status bar
+set laststatus=2
+
+"" Use modeline overrides
+set modeline
+set modelines=10
+
+set title
+set titleold="Terminal"
+set titlestring=%F
+
+if exists("*fugitive#statusline")
+  set statusline+=%{fugitive#statusline()}
+endif
 "" Working with Unicode
 if has('multi_byte')
   if &termencoding == ""
@@ -12,7 +64,6 @@ if has('multi_byte')
 endif
 
 set encoding=utf-8
-
 set number
 set nocompatible
 set bg=dark
@@ -39,16 +90,16 @@ set mouse=a
 
 filetype indent on        " Indent document according to filetype
 set expandtab             " Use whitespace instead of tab
-set shiftwidth=2          " Use two spaces indetation with reindent (<< or >>)
-set softtabstop=2         " Use two spaces as tab indetation
-set cino=(2               " Behaviour of indentation in unclosed parenthesis
+set shiftwidth=4          " Use two spaces indetation with reindent (<< or >>)
+set softtabstop=4         " Use two spaces as tab indetation
+set cino=(4               " Behaviour of indentation in unclosed parenthesis
 set autoindent            " Keep indentation from previous line
 set smartindent           " Automatically inserts indentation in some cases
 set cindent               " Like smartindent, but stricter and more customisabl
 
-"" highlight ColorColumn ctermbg=235 guibg=#2c2d27
-" let &colorcolumn="80,".join(range(120,999),",")    " Show 80 line vertical line
-
+set textwidth=80  " Wrap at 80 characters like a valid human
+set colorcolumn=80
+highlight ColorColumn ctermbg=246 guibg=#2c2d27
 """""""""""""""""""""""""""""
 "" SECTION: Folding
 """""""""""""""""""""""""""""
@@ -56,7 +107,6 @@ set foldmethod=syntax           " Fold according to syntax type
 set foldcolumn=1                " Show fold column next to numbers
 set foldlevelstart=20           " Start file with all folds open
 set foldminlines=2              " Fold only hunks with mre than 4 lines
-
 """""""""""""""""""""""""""""
 "" SECTION: Searching
 """""""""""""""""""""""""""""
@@ -65,10 +115,9 @@ set incsearch
 set ignorecase
 set smartcase
 """""""""""""""""""""""""""""
-
 set fileformats=unix
 set showcmd
-set shell=/bin/sh
+set shell=zsh
 
 "" Map leader to ,
 let mapleader=','

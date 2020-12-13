@@ -14,9 +14,9 @@ let g:neomake_message_sign = {
       \ }
 let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
+let g:neomake_open_list = 2
+let g:neomake_verbose = 1
 let g:neomake_list_height = 8
-
-let g:neomake_open_list = 0
 
 " augroup my_neomake_signs
 "   au!
@@ -32,6 +32,4 @@ let g:neomake_open_list = 0
 "         \ hi link NeomakeWarning SpellCap
 " augroup END
 
-" set makeprg=shellcheck\ -fgcc\ %
-" autocmd! BufWritePost * Neomake!
-" autocmd! BufWritePost * Neomake
+call neomake#configure#automake('w')

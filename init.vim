@@ -31,12 +31,10 @@ call plug#begin('~/.vim/plugged')
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+  " Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'Shougo/denite.nvim'
+  " Plug 'Shougo/denite.nvim'
   Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
@@ -57,12 +55,13 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'majutsushi/tagbar'
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'antoyo/vim-licenses'
 Plug 'jiangmiao/auto-pairs'  " Insert or delete brackets, parens, quotes in pair.
 Plug 'Rykka/InstantRst'  " RST preview plugin
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " Colorschemes --------------------------------------------->
 " Plug 'morhetz/gruvbox'
 Plug 'srcery-colors/srcery-vim'
@@ -74,9 +73,9 @@ Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 " Plug 'pacha/vem-tabline'
 """ ------------ FOLDING Plugins -------->
-" Plug 'zhimsel/vim-stay'
-" Plug 'kalekundert/vim-coiled-snake'
-" Plug 'Konfekt/FastFold'
+Plug 'zhimsel/vim-stay'
+Plug 'kalekundert/vim-coiled-snake'
+Plug 'Konfekt/FastFold'
 Plug 'tmhedberg/SimpylFold'
 "" <--------------------------------------
 " Plug 'tpope/vim-surround'
