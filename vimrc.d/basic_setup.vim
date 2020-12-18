@@ -11,6 +11,8 @@ endif
 " colorscheme gruvbox
 let g:srcery_italic = 1
 colorscheme srcery
+" let ayucolor="dark"
+" colorscheme ayu
 
 set mousemodel=popup
 set guioptions=egmrti
@@ -99,7 +101,7 @@ set cindent               " Like smartindent, but stricter and more customisabl
 
 set textwidth=80  " Wrap at 80 characters like a valid human
 set colorcolumn=80
-highlight ColorColumn ctermbg=246 guibg=#2c2d27
+highlight ColorColumn ctermbg=DarkRed guibg=DarkRed
 """""""""""""""""""""""""""""
 "" SECTION: Folding
 """""""""""""""""""""""""""""
