@@ -47,12 +47,14 @@ Plug 'zchee/deoplete-zsh'
 "" ------------------}
 Plug 'neomake/neomake'   " Code Checker - Liner
 Plug 'majutsushi/tagbar'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'antoyo/vim-licenses'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'  " Insert or delete brackets, parens, quotes in pair.
+Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'antoyo/vim-licenses'
 Plug 'Rykka/InstantRst'  " RST preview plugin
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " Colorschemes --------------------------------------------->
@@ -86,6 +88,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jeetsukumaran/vim-pythonsense'
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 Plug 'vim-python/python-syntax'
+Plug 'fisadev/vim-isort', {'do': 'pip install isort --user'}
 " <-----------------------------------------
 " Syntax Highlighting --------------------->
 Plug 'PotatoesMaster/i3-vim-syntax'
