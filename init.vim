@@ -29,21 +29,15 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+" main one
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+" 9000+ Snippets
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
+
 Plug 'Shougo/unite.vim'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
-"" Deoplete sources -----{
-Plug 'zchee/deoplete-jedi', { 'do': 'sudo pip install jedi' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
-Plug 'zchee/deoplete-clang'
-Plug 'zchee/deoplete-zsh'
+
 "" ------------------}
 Plug 'neomake/neomake'   " Code Checker - Liner
 Plug 'majutsushi/tagbar'
