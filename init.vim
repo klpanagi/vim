@@ -33,6 +33,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 " 9000+ Snippets
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 
@@ -45,8 +46,9 @@ Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'  " Insert or delete brackets, parens, quotes in pair.
 Plug 'machakann/vim-highlightedyank'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'antoyo/vim-licenses'
 Plug 'Rykka/InstantRst'  " RST preview plugin
