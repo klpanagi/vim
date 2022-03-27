@@ -15,7 +15,7 @@ let g:neomake_message_sign = {
 let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
 let g:neomake_open_list = 2
-let g:neomake_verbose = 1
+"let g:neomake_verbose = 1
 let g:neomake_list_height = 8
 
 " augroup my_neomake_signs
@@ -32,4 +32,4 @@ let g:neomake_list_height = 8
 "         \ hi link NeomakeWarning SpellCap
 " augroup END
 
-call neomake#configure#automake('w')
+"call neomake#configure#automake('w')

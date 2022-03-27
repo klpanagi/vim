@@ -20,3 +20,5 @@ augroup END
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 
 " au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+"
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab

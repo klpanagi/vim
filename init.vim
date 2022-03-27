@@ -36,11 +36,10 @@ Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
-
 Plug 'Shougo/unite.vim'
 
-"" ------------------}
 Plug 'neomake/neomake'   " Code Checker - Liner
+"" ------------------}
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
@@ -51,8 +50,6 @@ Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'antoyo/vim-licenses'
-Plug 'Rykka/InstantRst'  " RST preview plugin
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " Colorschemes --------------------------------------------->
 Plug 'morhetz/gruvbox'
 Plug 'srcery-colors/srcery-vim'
