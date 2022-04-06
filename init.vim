@@ -30,9 +30,9 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 " main one
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-" 9000+ Snippets
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+" Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+" " 9000+ Snippets
+" Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
