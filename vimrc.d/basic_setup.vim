@@ -10,9 +10,9 @@ endif
 
 " colorscheme gruvbox
 let g:srcery_italic = 1
-" colorscheme srcery
-let ayucolor="dark"
-colorscheme ayu
+colorscheme srcery
+" let ayucolor="dark"
+" colorscheme ayu
 
 set mousemodel=popup
 set guioptions=egmrti
