@@ -36,7 +36,12 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'Shougo/unite.vim'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+
+Plug 'glepnir/dashboard-nvim'
 
 Plug 'neomake/neomake'   " Code Checker - Liner
 "" ------------------}
@@ -58,7 +63,8 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'tpope/vim-commentary'
 Plug 'ntpeters/vim-better-whitespace'
 " Plug 'pacha/vem-tabline'
-""" ------------ FOLDING Plugins -------->
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+"" ------------ FOLDING Plugins -------->
 Plug 'zhimsel/vim-stay'
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
@@ -70,8 +76,7 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 " <-----------------------------------------
 " Status Bar ------------------------------>
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
 " < ----------------------------------------
 "" Git related ---------------------------->
 Plug 'airblade/vim-gitgutter'
