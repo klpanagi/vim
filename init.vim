@@ -29,10 +29,7 @@ endfunction
 
 call plug#begin('~/.vim/plugged')
 
-" main one
-" Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-" " 9000+ Snippets
-" Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'nvim-lua/plenary.nvim'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -40,62 +37,44 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
-
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 Plug 'glepnir/dashboard-nvim'
-"" ------------------}
-" Plug 'majutsushi/tagbar'
 Plug 'preservim/tagbar'
 Plug 'tpope/vim-surround'
-Plug 'Yggdroot/indentLine'
+" Visual effects for indented blocks
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'jiangmiao/auto-pairs'  " Insert or delete brackets, parens, quotes in pair.
 Plug 'machakann/vim-highlightedyank'
-
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
-
-Plug 'antoyo/vim-licenses'
-" Colorschemes --------------------------------------------->
-Plug 'morhetz/gruvbox'
-Plug 'srcery-colors/srcery-vim'
-Plug 'ayu-theme/ayu-vim'
-" ----------------------------------------------------------
-Plug 'tpope/vim-commentary'
+" Highlight matches of unde-cursor words
+Plug 'RRethy/vim-illuminate'
+" Comment lines and blocks
+Plug 'numToStr/Comment.nvim'
 Plug 'ntpeters/vim-better-whitespace'
-" Plug 'pacha/vem-tabline'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
-"" ------------ FOLDING Plugins -------->
-Plug 'zhimsel/vim-stay'
-Plug 'kalekundert/vim-coiled-snake'
-Plug 'Konfekt/FastFold'
-Plug 'tmhedberg/SimpylFold'
-"" <--------------------------------------
+" Status Bar
+Plug 'nvim-lualine/lualine.nvim'
+" Git signs/actions/etc
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'anuvyklack/pretty-fold.nvim'
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
+Plug 'fisadev/vim-isort', {'do': 'pip install isort --user'}
 "" Vim and Tmux together ------------------>
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 " <-----------------------------------------
-" Status Bar ------------------------------>
-Plug 'nvim-lualine/lualine.nvim'
-" < ----------------------------------------
-"" Git related ---------------------------->
-Plug 'airblade/vim-gitgutter'
-"  <----------------------------------------
-" Python specific ------------------------->
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'jeetsukumaran/vim-pythonsense'
-" Plug 'vim-python/python-syntax'
-Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
-Plug 'fisadev/vim-isort', {'do': 'pip install isort --user'}
-" <-----------------------------------------
-" Syntax Highlighting --------------------->
-Plug 'PotatoesMaster/i3-vim-syntax'
-Plug 'igordejanovic/textx.vim'
-Plug 'chr4/nginx.vim'
-" <-----------------------------------------
+" Colorschemes --------------------------------------------->
+Plug 'morhetz/gruvbox'
+Plug 'srcery-colors/srcery-vim'
+Plug 'ayu-theme/ayu-vim'
+" ----------------------------------------------------------
 
 call plug#end()
+
+exe 'source' '~/.vim/vimrc.d/packer.lua'
+
 
 if has('nvim')
   let g:python_host_prog = '/usr/bin/python2'
