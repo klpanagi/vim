@@ -41,11 +41,12 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
-Plug 'glepnir/dashboard-nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-Plug 'neomake/neomake'   " Code Checker - Liner
+Plug 'glepnir/dashboard-nvim'
 "" ------------------}
-Plug 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar'
+Plug 'preservim/tagbar'
 Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 Plug 'jiangmiao/auto-pairs'  " Insert or delete brackets, parens, quotes in pair.
@@ -84,8 +85,8 @@ Plug 'airblade/vim-gitgutter'
 " Python specific ------------------------->
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'jeetsukumaran/vim-pythonsense'
+" Plug 'vim-python/python-syntax'
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
-Plug 'vim-python/python-syntax'
 Plug 'fisadev/vim-isort', {'do': 'pip install isort --user'}
 " <-----------------------------------------
 " Syntax Highlighting --------------------->

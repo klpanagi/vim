@@ -14,24 +14,22 @@ let g:neomake_message_sign = {
       \ }
 let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
 
+let g:neomake_open_list = 2
+"let g:neomake_verbose = 1
 let g:neomake_list_height = 8
 
-let g:neomake_open_list = 0
+" augroup my_neomake_signs
+"   au!
+"   autocmd ColorScheme *
+"         \ hi NeomakeErrorSign ctermfg=white |
+"         \ hi NeomakeWarningSign ctermfg=yellow
+" augroup END
 
-augroup my_neomake_signs
-  au!
-  autocmd ColorScheme *
-        \ hi NeomakeErrorSign ctermfg=white |
-        \ hi NeomakeWarningSign ctermfg=yellow
-augroup END
+" augroup my_neomake_highlights
+"   au!
+"   autocmd ColorScheme *
+"         \ hi link NeomakeError SpellBad |
+"         \ hi link NeomakeWarning SpellCap
+" augroup END
 
-augroup my_neomake_highlights
-  au!
-  autocmd ColorScheme *
-        \ hi link NeomakeError SpellBad |
-        \ hi link NeomakeWarning SpellCap
-augroup END
-
-" set makeprg=shellcheck\ -fgcc\ %
-" autocmd! BufWritePost * Neomake!
-autocmd! BufWritePost * Neomake
+"call neomake#configure#automake('w')
