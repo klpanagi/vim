@@ -58,6 +58,7 @@ Plug 'nvim-lualine/lualine.nvim'
 " Git signs/actions/etc
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'anuvyklack/pretty-fold.nvim'
+Plug 'eddiebergman/nvim-treesitter-pyfold'
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 Plug 'fisadev/vim-isort', {'do': 'pip install isort --user'}
 "" Vim and Tmux together ------------------>

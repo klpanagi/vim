@@ -105,10 +105,11 @@ highlight ColorColumn ctermbg=DarkRed guibg=DarkRed
 """""""""""""""""""""""""""""
 "" SECTION: Folding
 """""""""""""""""""""""""""""
-set foldmethod=syntax           " Fold according to syntax type
-set foldcolumn=1                " Show fold column next to numbers
-set foldlevelstart=20           " Start file with all folds open
-set foldminlines=2              " Fold only hunks with mre than 4 lines
+" set foldmethod=syntax           " Fold according to syntax type
+" set foldmethod=indent           " Fold according to syntax type
+" set foldcolumn=1                " Show fold column next to numbers
+" set foldlevelstart=20           " Start file with all folds open
+" set foldminlines=2              " Fold only hunks with mre than 4 lines
 """""""""""""""""""""""""""""
 "" SECTION: Searching
 """""""""""""""""""""""""""""

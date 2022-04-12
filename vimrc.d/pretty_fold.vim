@@ -1,7 +1,14 @@
 lua << EOF
 
+local vim = vim
+local opt = vim.opt
+
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 require('pretty-fold').setup{
    keep_indentation = false,
+   key = 'h',
    fill_char = '━',
    sections = {
       left = {
@@ -16,3 +23,6 @@ require('pretty-fold').setup{
 require('pretty-fold.preview').setup()
 
 EOF
+
+" set foldmethod=expr
+" set foldexpr=nvim_treesitter#foldexpr()
