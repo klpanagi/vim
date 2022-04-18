@@ -37,6 +37,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'onsails/lspkind-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'glepnir/dashboard-nvim'
 Plug 'preservim/tagbar'
@@ -71,6 +72,7 @@ Plug 'morhetz/gruvbox'
 Plug 'srcery-colors/srcery-vim'
 Plug 'ayu-theme/ayu-vim'
 " ----------------------------------------------------------
+Plug 'igordejanovic/textx.vim'
 
 call plug#end()
 
