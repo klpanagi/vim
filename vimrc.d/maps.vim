@@ -56,3 +56,5 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 nnoremap <silent> <A-Right> :bnext<CR>
 nnoremap <silent> <A-Left> :bprev<CR>
+
+nnoremap <F3> :NvimTreeToggle<CR>

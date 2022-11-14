@@ -1,4 +1,3 @@
-lua << END
 -- Eviline config for lualine
 -- Author: shadmansaleh
 -- Credit: glepnir
@@ -220,4 +219,3 @@ ins_right {
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
-END

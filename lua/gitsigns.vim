@@ -1,5 +1,3 @@
-lua << EOF
-
 require('gitsigns').setup {
   signs = {
     add = { text = '+' },
@@ -9,5 +7,3 @@ require('gitsigns').setup {
     changedelete = { text = '~' },
   },
 }
-
-EOF
