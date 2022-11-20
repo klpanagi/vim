@@ -26,6 +26,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'nvim-lua/plenary.nvim'
 
 Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -61,9 +63,7 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 " <-----------------------------------------
 " Colorschemes --------------------------------------------->
-Plug 'morhetz/gruvbox'
 Plug 'srcery-colors/srcery-vim'
-Plug 'ayu-theme/ayu-vim'
 Plug 'glepnir/zephyr-nvim'
 " ----------------------------------------------------------
 Plug 'igordejanovic/textx.vim'
@@ -83,10 +83,6 @@ exe 'source' '~/.vim/vimrc.d/basic_setup.vim'
 exe 'source' '~/.vim/vimrc.d/maps.vim'
 exe 'source' '~/.vim/vimrc.d/autocmd.vim'
 exe 'source' '~/.vim/vimrc.d/tagbar.vim'
-exe 'source' '~/.vim/vimrc.d/xterm_control.vim'
-exe 'source' '~/.vim/vimrc.d/pydocstring.vim'
 exe 'source' '~/.vim/vimrc.d/plugs.vim'
 
 lua require("plugins")
-
-" lua require("bufferline").setup{}
