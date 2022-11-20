@@ -9,10 +9,11 @@ if (has("termguicolors"))
 endif
 
 " colorscheme gruvbox
-let g:srcery_italic = 1
-colorscheme srcery
+" let g:srcery_italic = 1
+" colorscheme srcery
 " let ayucolor="dark"
 " colorscheme ayu
+colorscheme zephyr
 
 set mousemodel=popup
 set guioptions=egmrti

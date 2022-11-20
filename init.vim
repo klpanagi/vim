@@ -46,7 +46,7 @@ Plug 'RRethy/vim-illuminate'
 " Comment lines and blocks
 Plug 'numToStr/Comment.nvim'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 " Git signs/actions/etc
 Plug 'lewis6991/gitsigns.nvim'
 
@@ -64,6 +64,7 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'morhetz/gruvbox'
 Plug 'srcery-colors/srcery-vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'glepnir/zephyr-nvim'
 " ----------------------------------------------------------
 Plug 'igordejanovic/textx.vim'
 call plug#end()
@@ -86,5 +87,6 @@ exe 'source' '~/.vim/vimrc.d/xterm_control.vim'
 exe 'source' '~/.vim/vimrc.d/pydocstring.vim'
 exe 'source' '~/.vim/vimrc.d/plugs.vim'
 
-lua require("nvimtree")
-lua require("foldpreview")
+lua require("plugins")
+
+" lua require("bufferline").setup{}
