@@ -29,13 +29,18 @@ Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 
+Plug 'RishabhRD/popfix'
+Plug 'RishabhRD/nvim-lsputils'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'lukas-reineke/cmp-under-comparator'
 
 " For vsnip users.
 Plug 'hrsh7th/cmp-vsnip'
@@ -43,22 +48,24 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug 'glepnir/dashboard-nvim'
 Plug 'preservim/tagbar'
-Plug 'tpope/vim-surround'
+Plug 'kylechui/nvim-surround'
+
+Plug 'kyazdani42/nvim-tree.lua'
+
 " Visual effects for indented blocks
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'jiangmiao/auto-pairs'  " Insert or delete brackets, parens, quotes in pair.
 Plug 'machakann/vim-highlightedyank'
+Plug 'RRethy/vim-illuminate'
 
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-lualine/lualine.nvim'  " Status line
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 
 " Highlight matches of unde-cursor words
-Plug 'RRethy/vim-illuminate'
 " Comment lines and blocks
 Plug 'numToStr/Comment.nvim'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
 " Git signs/actions/etc
 Plug 'lewis6991/gitsigns.nvim'
 
@@ -76,6 +83,7 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'srcery-colors/srcery-vim'
 Plug 'glepnir/zephyr-nvim'
 " ----------------------------------------------------------
+Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'igordejanovic/textx.vim'
 call plug#end()
 
@@ -96,3 +104,4 @@ exe 'source' '~/.vim/vimrc.d/tagbar.vim'
 exe 'source' '~/.vim/vimrc.d/plugs.vim'
 
 lua require("plugins")
+lua require("lazy")

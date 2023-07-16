@@ -106,6 +106,9 @@ highlight ColorColumn ctermbg=DarkRed guibg=DarkRed
 """""""""""""""""""""""""""""
 "" SECTION: Folding
 """""""""""""""""""""""""""""
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set nofoldenable
 " set foldmethod=syntax           " Fold according to syntax type
 " set foldmethod=indent           " Fold according to syntax type
 " set foldcolumn=1                " Show fold column next to numbers
