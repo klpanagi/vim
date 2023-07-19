@@ -444,3 +444,14 @@ sources = cmp.config.sources({
 require("nvim-surround").setup({
     -- Configuration here, or leave empty to use defaults
 })
+
+require("catppuccin").setup({
+    integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        treesitter = true,
+        notify = false,
+        mini = false,
+    }
+})
