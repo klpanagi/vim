@@ -14,7 +14,8 @@ endif
 " let ayucolor="dark"
 " colorscheme ayu
 " colorscheme zephyr
-colorscheme catppuccin-mocha
+" colorscheme catppuccin-mocha
+colorscheme dracula
 
 set mousemodel=popup
 set guioptions=egmrti

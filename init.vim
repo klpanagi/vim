@@ -83,6 +83,7 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'srcery-colors/srcery-vim'
 Plug 'glepnir/zephyr-nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'dracula/vim', { 'as': 'dracula' }
 " ----------------------------------------------------------
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'igordejanovic/textx.vim'
